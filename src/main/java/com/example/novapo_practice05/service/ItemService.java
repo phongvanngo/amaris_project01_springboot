@@ -66,6 +66,9 @@ public class ItemService {
                 itemToUpdate.setCatalog(catalog.get());
             }
         }
+        else {
+            itemToUpdate.setCatalog(existingItem.get().getCatalog());
+        }
 
         Item newItem = itemRepository.save(itemToUpdate);
         return itemMapper.toResponseDTO(newItem);
