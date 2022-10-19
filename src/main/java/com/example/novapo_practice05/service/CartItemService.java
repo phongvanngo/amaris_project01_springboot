@@ -13,6 +13,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.function.BiFunction;
 import javax.swing.text.html.Option;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,12 @@ public class CartItemService {
     private final CartItemRepository cartItemRepository;
     private final ItemRepository itemRepository;
     private final UserRepository userRepository;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private ItemService itemService;
 
     private static BiFunction<JpaRepository, Long, Boolean> checkRecodExist = (repository, id) -> {
 
@@ -41,7 +48,7 @@ public class CartItemService {
         this.userRepository = userRepository;
     }
 
-    public ResponseCartItemDTO addToCart(CartItemDTO cartItemDTO) {
+    public ResponseCartItemDTO addToCartBeforeRefractor(CartItemDTO cartItemDTO) {
         /***
          * Check user exists
          * Check item exists
@@ -53,12 +60,13 @@ public class CartItemService {
         boolean isUserExist = checkRecodExist.apply(userRepository,userID);
         boolean isItemExist = checkRecodExist.apply(itemRepository,itemID);
 
-
         if (isUserExist && isItemExist) {
             CartItem newCartItem;
 //            Optional<CartItem> existingCartItem = cartItemRepository.findCartItemByUserAndItem(userID,itemID);
 
-            Optional<CartItem> existingCartItem = Optional.ofNullable(cartItemRepository.findCartItemByUserAndItem(userID,itemID));
+//            Optional<CartItem> existingCartItem = Optional.ofNullable(cartItemRepository.findCartItemByUserAndItem(userID,itemID));
+            Optional<CartItem> existingCartItem = cartItemRepository.findCartItemByUserAndItem(userID,itemID);
+
             int requestQuantity = cartItemDTO.getQuantity();
             if (existingCartItem.isPresent()) {
                 int currentQuantity = existingCartItem.get().getQuantity();
@@ -67,6 +75,7 @@ public class CartItemService {
             }
             else {
                 newCartItem = new CartItem();
+
                 Optional<Item> item = itemRepository.findById(itemID);
                 Optional<UserEntity> user = userRepository.findById(userID);
                 newCartItem.setItem(item.get());
@@ -81,4 +90,44 @@ public class CartItemService {
         return null;
 
     }
+    public ResponseCartItemDTO addToCart(CartItemDTO cartItemDTO) {
+        /***
+         * Check user exists
+         * Check item exists
+         * auto increase quantity
+         */
+
+        Long userID = cartItemDTO.getUserID();
+        Long itemID = cartItemDTO.getItemID();
+
+        Item item = itemService.getbByID(itemID);
+        UserEntity user = userService.getByID(userID);
+
+        CartItem newCartItem;
+
+        Optional<CartItem> existingCartItem = findExistingCartItem(userID,itemID);
+
+        int requestQuantity = cartItemDTO.getQuantity();
+
+        if (existingCartItem.isPresent()) {
+            int currentQuantity = existingCartItem.get().getQuantity();
+            existingCartItem.get().setQuantity(currentQuantity+requestQuantity);
+            newCartItem = existingCartItem.get();
+        }
+        else {
+            newCartItem = new CartItem();
+            newCartItem.setItem(item);
+            newCartItem.setUser(user);
+            newCartItem.setQuantity(requestQuantity);
+        }
+        newCartItem = cartItemRepository.save(newCartItem);
+        System.out.println(newCartItem);
+        return cartItemMapper.toResponseDTO(newCartItem);
+
+    }
+
+    public Optional<CartItem> findExistingCartItem(Long userID, Long itemID) {
+        return cartItemRepository.findCartItemByUserAndItem(userID,itemID);
+    }
+
 }

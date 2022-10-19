@@ -2,6 +2,7 @@ package com.example.novapo_practice05.service;
 
 import com.example.novapo_practice05.domain.Catalog;
 import com.example.novapo_practice05.domain.Item;
+import com.example.novapo_practice05.exception.ItemNotFoundException;
 import com.example.novapo_practice05.repository.CatalogRepository;
 import com.example.novapo_practice05.repository.ItemRepository;
 import com.example.novapo_practice05.service.dto.Item.ItemDTO;
@@ -98,5 +99,13 @@ public class ItemService {
         return results;
     }
 
+    public Item getbByID(long id){
+        Optional<Item> item = itemRepository.findById(id);
+        if(item.isPresent()) {
+            return item.get();
+        }
+        else throw new ItemNotFoundException(id);
+
+    }
 
 }
