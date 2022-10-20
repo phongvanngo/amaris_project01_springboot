@@ -41,6 +41,26 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
 
+
+    @ExceptionHandler(CouldNotCreateUserException.class)
+    public ResponseEntity<Object> handleCouldNotCreateUserException(
+        ItemNotFoundException ex, WebRequest request) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "Cannot create user");
+        body.put("status", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(DuplicateEmailException.class)
+    public ResponseEntity<Object> handleDuplicateEmailException(
+        ItemNotFoundException ex, WebRequest request) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "Email already exists");
+        body.put("status", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+    }
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
         HttpHeaders headers, HttpStatus status, WebRequest request) {
@@ -56,6 +76,8 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         body.put("errors", errors);
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
+
+    //how to override INTERNAL SERVER ERROR
 
 
 }

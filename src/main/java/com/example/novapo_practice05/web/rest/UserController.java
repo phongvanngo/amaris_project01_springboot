@@ -5,6 +5,8 @@ import com.example.novapo_practice05.service.dto.User.SignUpDTO;
 import com.example.novapo_practice05.service.dto.User.UserResponseDTO;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +29,18 @@ public class UserController {
     public UserResponseDTO createUser(@RequestBody SignUpDTO request) {
 //        return request.toString();
         return userService.createUser(request);
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<UserResponseDTO> register(@RequestBody SignUpDTO request) {
+//        return request.toString();
+        return new ResponseEntity<>(userService.registerUser(request), HttpStatus.OK);
+    }
+
+    @PostMapping("/register/admin")
+    public ResponseEntity<UserResponseDTO> egisterAdmin(@RequestBody SignUpDTO request) {
+//        return request.toString();
+        return new ResponseEntity<>(userService.registerAdminUser(request), HttpStatus.OK);
     }
 
     @GetMapping("/users")

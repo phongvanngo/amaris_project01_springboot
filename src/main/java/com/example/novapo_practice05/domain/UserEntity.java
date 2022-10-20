@@ -14,7 +14,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
@@ -41,7 +43,7 @@ public class UserEntity extends AbstractAuditingEntity {
 
     @Email
     @NotNull
-    @Column(name="email")
+    @Column(name="email",unique = true)
     private String email;
 
     @NotNull
@@ -58,6 +60,9 @@ public class UserEntity extends AbstractAuditingEntity {
     @Enumerated(EnumType.ORDINAL)
     @Column(name="role")
     private UserRole role = UserRole.CUSTOMER;
+
+    @OneToMany(mappedBy="user",fetch=FetchType.EAGER)
+    private Set<Authority> authorities;
 
 
 }

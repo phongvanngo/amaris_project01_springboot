@@ -1,7 +1,9 @@
 package com.example.novapo_practice05.service.dto.User;
 
 import com.example.novapo_practice05.domain.UserEntity.UserRole;
+import lombok.Data;
 
+@Data
 public class UserCustomerDTO {
     private String firstName;
     private String lastName;
