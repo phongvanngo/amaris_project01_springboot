@@ -1,13 +1,17 @@
 package com.example.novapo_practice05.config;
 
+import com.example.novapo_practice05.filter.AuthoritiesLoggingAfterFilter;
+import com.example.novapo_practice05.filter.AuthoritiesLoggingAtFilter;
+import com.example.novapo_practice05.filter.RequestValidationBeforeFilter;
 import java.util.Collections;
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
@@ -19,6 +23,7 @@ public class ProjectSecurityConfig {
 
         CorsConfigurationSource corsConfigurationSource = request -> {
             CorsConfiguration config = new CorsConfiguration();
+
             config.setAllowedOrigins(Collections.singletonList("http://localhost:3000"));
             config.setAllowedMethods(Collections.singletonList("*"));
             config.setAllowCredentials(true);
@@ -27,8 +32,13 @@ public class ProjectSecurityConfig {
             return config;
         };
 
-        http.cors().configurationSource(corsConfigurationSource)
-            .and().csrf().disable()
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+            .cors().configurationSource(corsConfigurationSource);
+        http.csrf().disable();
+
+        http.addFilterBefore(new RequestValidationBeforeFilter(), BasicAuthenticationFilter.class)
+            .addFilterAt(new AuthoritiesLoggingAtFilter(), BasicAuthenticationFilter.class)
+            .addFilterAfter(new AuthoritiesLoggingAfterFilter(), BasicAuthenticationFilter.class)
             .authorizeRequests()
             .antMatchers("/api/item").hasRole("CUSTOMER")
             .antMatchers("/api/catalog").hasAnyRole("ADMIN")
