@@ -22,7 +22,7 @@ public class CartItemController {
     @PostMapping()
     public ResponseEntity<ResponseCartItemDTO> addToCart(@RequestBody @Valid CartItemDTO cartItem) {
         ResponseCartItemDTO responseCartItemDTO = cartItemService.addToCart(cartItem);
-        return new ResponseEntity<ResponseCartItemDTO>(responseCartItemDTO, HttpStatus.OK);
+        return new ResponseEntity<>(responseCartItemDTO, HttpStatus.OK);
     }
 
 }

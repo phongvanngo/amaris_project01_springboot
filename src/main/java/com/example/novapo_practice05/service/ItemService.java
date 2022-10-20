@@ -63,9 +63,7 @@ public class ItemService {
 //        if update catalogID
         if (catalogID.isPresent()) {
             Optional<Catalog> catalog = catalogRepository.findById(catalogID.get());
-            if (catalog.isPresent()) {
-                itemToUpdate.setCatalog(catalog.get());
-            }
+            catalog.ifPresent(catalog1 -> itemToUpdate.setCatalog(catalog1));
         }
         else {
             itemToUpdate.setCatalog(existingItem.get().getCatalog());
@@ -83,7 +81,7 @@ public class ItemService {
             Item item = itemRepository.save(itemToDelete.get());
             return itemMapper.toResponseDTO(item);
         }
-        ;
+
         return null;
     }
 

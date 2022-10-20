@@ -44,10 +44,9 @@ public class UserService {
 
         System.out.println(users);
 
-        for (UserEntity user:users
-        ) {
+        for (UserEntity user:users) {
             results.add(userMapper.toResponseDto(user));
-        };
+        }
 
         return results;
     }

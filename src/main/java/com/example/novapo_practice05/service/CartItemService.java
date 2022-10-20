@@ -10,9 +10,7 @@ import com.example.novapo_practice05.service.dto.CartItem.CartItemDTO;
 import com.example.novapo_practice05.service.dto.CartItem.ResponseCartItemDTO;
 import com.example.novapo_practice05.service.mapper.CartItemMapper;
 import java.util.Optional;
-import java.util.OptionalInt;
 import java.util.function.BiFunction;
-import javax.swing.text.html.Option;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
@@ -31,14 +29,8 @@ public class CartItemService {
     @Autowired
     private ItemService itemService;
 
-    private static BiFunction<JpaRepository, Long, Boolean> checkRecodExist = (repository, id) -> {
-
-        if (repository.findById(id).isPresent()) {
-            return true;
-        }
-        return false;
-    };
-
+    private final BiFunction<JpaRepository, Long, Boolean> checkRecordExist =
+        (repository, id) -> repository.findById(id).isPresent();
 
     public CartItemService(CartItemMapper cartItemMapper, CartItemRepository cartItemRepository,
         ItemRepository itemRepository, UserRepository userRepository) {
@@ -57,8 +49,8 @@ public class CartItemService {
         Long userID = cartItemDTO.getUserID();
         Long itemID = cartItemDTO.getItemID();
 
-        boolean isUserExist = checkRecodExist.apply(userRepository,userID);
-        boolean isItemExist = checkRecodExist.apply(itemRepository,itemID);
+        boolean isUserExist = this.checkRecordExist.apply(userRepository,userID);
+        boolean isItemExist = checkRecordExist.apply(itemRepository,itemID);
 
         if (isUserExist && isItemExist) {
             CartItem newCartItem;
@@ -90,6 +82,12 @@ public class CartItemService {
         return null;
 
     }
+
+    /**
+     *
+     * @param cartItemDTO
+     * @return
+     */
     public ResponseCartItemDTO addToCart(CartItemDTO cartItemDTO) {
         /***
          * Check user exists
@@ -113,8 +111,7 @@ public class CartItemService {
             int currentQuantity = existingCartItem.get().getQuantity();
             existingCartItem.get().setQuantity(currentQuantity+requestQuantity);
             newCartItem = existingCartItem.get();
-        }
-        else {
+        } else {
             newCartItem = new CartItem();
             newCartItem.setItem(item);
             newCartItem.setUser(user);
