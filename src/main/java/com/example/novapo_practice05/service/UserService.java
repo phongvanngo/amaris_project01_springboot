@@ -13,6 +13,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -22,22 +23,24 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private UserMapper userMapper;
 
-    private final UserMapper userMapper;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
-    private final PasswordEncoder passwordEncoder;
-
-    public UserService(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.userMapper = userMapper;
-        this.passwordEncoder = passwordEncoder;
-    }
+//    public UserService(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder) {
+//        this.userRepository = userRepository;
+//        this.userMapper = userMapper;
+//        this.passwordEncoder = passwordEncoder;
+//    }
 
     public UserResponseDTO createUser(SignUpDTO userData) {
         System.out.println(userData.toString());
         UserEntity newUser = userMapper.toEntity(userData);
-        newUser.setRole(UserRole.CUSTOMER);
+        newUser.setRole(UserRole.ROLE_CUSTOMER);
         newUser.setCreatedAt(Instant.now());
         newUser = userRepository.save(userMapper.toEntity(userData));
         System.out.println(newUser.getCreatedAt().toString());
@@ -132,7 +135,7 @@ public class UserService implements UserDetailsService {
         try {
             String hashPwd = passwordEncoder.encode(savedUser.getPassword());
             savedUser.setPassword(hashPwd);
-            savedUser.setRole(UserRole.ADMINISTRATOR);
+            savedUser.setRole(UserRole.ROLE_ADMINISTRATOR);
             savedUser = userRepository.save(savedUser);
             if (savedUser.getId() > 0) {
                 newUser = userMapper.toResponseDto(savedUser);

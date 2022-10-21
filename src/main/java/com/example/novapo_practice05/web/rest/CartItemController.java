@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/cart")
 public class CartItemController {
 
     @Autowired
     CartItemService cartItemService;
 
-    @PostMapping()
+    @PostMapping("/cart")
     public ResponseEntity<ResponseCartItemDTO> addToCart(@RequestBody @Valid CartItemDTO cartItem) {
         ResponseCartItemDTO responseCartItemDTO = cartItemService.addToCart(cartItem);
         return new ResponseEntity<>(responseCartItemDTO, HttpStatus.OK);
