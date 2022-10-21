@@ -13,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Component
 public class JwtTokenProvider {
 
     // Đoạn JWT_SECRET này là bí mật, chỉ có phía server biết

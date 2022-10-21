@@ -16,7 +16,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Component
 public class JwtTokenService {
     private static final long EXPIRE_DURATION = 24 * 60 * 60 * 1000; // 24 hour
 

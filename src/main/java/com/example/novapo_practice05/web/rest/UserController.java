@@ -29,10 +29,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     @Autowired
-    AuthenticationManager authManager;
-    @Autowired
-    JwtTokenProvider jwtTokenProvider;
-    @Autowired
     UserService userService;
 
     @GetMapping("/ping")
@@ -46,11 +42,7 @@ public class UserController {
         return userService.createUser(request);
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<UserResponseDTO> register(@RequestBody SignUpDTO request) {
-//        return request.toString();
-        return new ResponseEntity<>(userService.registerUser(request), HttpStatus.OK);
-    }
+
 
     @PostMapping("/register/admin")
     public ResponseEntity<UserResponseDTO> registerAdmin(@RequestBody SignUpDTO request) {
@@ -72,29 +64,6 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/auth/login")
-    public ResponseEntity<AuthResponseDTO> login(@RequestBody @Valid AuthDTO request) {
-        Authentication authentication = authManager.authenticate(
-            new UsernamePasswordAuthenticationToken(
-                request.getEmail(),
-                request.getPassword()
-            )
-        );
 
-        // Nếu không xảy ra exception tức là thông tin hợp lệ
-        // Set thông tin authentication vào Security Context
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        // Trả về jwt cho người dùng.
-//        CustomUserDetails customUserDetails = new CustomUserDetails(new UserEntity())
-        UserEntity userLogin = new UserEntity();
-        userLogin.setPassword(request.getPassword());
-        userLogin.setEmail((request.getEmail()));
-        CustomUserDetails customUserDetails = new CustomUserDetails(userLogin);
-        String jwt = jwtTokenProvider.generateToken(customUserDetails);
-//        String jwt = jwtTokenProvider.generateToken((CustomUserDetails) authentication.getPrincipal());
-        AuthResponseDTO response = new AuthResponseDTO(request.getEmail(),jwt);
-        return new ResponseEntity<>(response,HttpStatus.OK);
-    }
 
 }

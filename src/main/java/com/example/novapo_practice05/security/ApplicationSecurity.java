@@ -55,7 +55,7 @@ public class ApplicationSecurity {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests()
-            .antMatchers("/item").hasRole("CUSTOMER")
+            .antMatchers("/item").hasRole("ADMIN")
             .antMatchers("/auth/login", "/docs/**", "/users", "/register","/register/admin","/set-role").permitAll()
             .anyRequest().authenticated();
 

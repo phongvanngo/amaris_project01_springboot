@@ -42,7 +42,6 @@ public class UserService implements UserDetailsService {
     private UserRoleService userRoleService;
 
 
-
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -76,6 +75,7 @@ public class UserService implements UserDetailsService {
             throw new UserNotFoundException(id);
         }
     }
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         String userName, password = null;
@@ -94,6 +94,8 @@ public class UserService implements UserDetailsService {
     }
 
 
+
+
     private boolean isEmailUnique(String email) {
         var user = userRepository.findByEmail(email);
 //        System.out.println(user.get());
@@ -101,7 +103,6 @@ public class UserService implements UserDetailsService {
     }
 
     public UserResponseDTO registerUser(SignUpDTO signUpDTO) {
-//        validateUniqueEmail(signUpDTO.getEmail());
         if (!isEmailUnique(signUpDTO.getEmail())) {
             throw new DuplicateEmailException(signUpDTO.getEmail());
         }
@@ -145,9 +146,13 @@ public class UserService implements UserDetailsService {
 
     public UserResponseDTO setRole(SetRoleDTO setRoleDTO) {
         Optional<UserRole> userRole = userRoleService.getRoleByName(setRoleDTO.getRoleName());
-        if (userRole.isEmpty()) throw new UserRoleNotFoundException(setRoleDTO.getRoleName());
+        if (userRole.isEmpty()) {
+            throw new UserRoleNotFoundException(setRoleDTO.getRoleName());
+        }
         Optional<UserEntity> user = userRepository.findById(setRoleDTO.getUserID());
-        if (user.isEmpty()) throw new UserNotFoundException(setRoleDTO.getUserID());
+        if (user.isEmpty()) {
+            throw new UserNotFoundException(setRoleDTO.getUserID());
+        }
 
         System.out.println(userRole);
         System.out.println(user);
@@ -157,6 +162,10 @@ public class UserService implements UserDetailsService {
         user.get().setRoles(userRoles);
 
         return userMapper.toResponseDto(userRepository.save(user.get()));
+    }
+
+    public Optional<UserEntity> getByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
 }

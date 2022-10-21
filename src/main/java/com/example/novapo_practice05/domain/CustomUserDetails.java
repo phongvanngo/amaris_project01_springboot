@@ -1,7 +1,9 @@
 package com.example.novapo_practice05.domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Set;
 import javax.annotation.security.RolesAllowed;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -15,15 +17,18 @@ import lombok.Data;
 public class CustomUserDetails implements UserDetails {
 
     UserEntity user;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Mặc định mình sẽ để tất cả là ROLE_USER. Để demo cho đơn giản.
         return Collections.singleton(new SimpleGrantedAuthority(user.getAuthorities().toString()));
     }
 
-    public Collection<? extends GrantedAuthority> getRoles() {
-        // Mặc định mình sẽ để tất cả là ROLE_USER. Để demo cho đơn giản.
-        return Collections.singleton(new SimpleGrantedAuthority(user.getRoles().toString()));
+    public Collection<SimpleGrantedAuthority> getRoles() {
+        Collection<SimpleGrantedAuthority> roles = new ArrayList<>();
+        for (UserRole role : user.getRoles()) {
+            roles.add(new SimpleGrantedAuthority(role.getName()));
+        }
+        return roles;
     }
 
     @Override
