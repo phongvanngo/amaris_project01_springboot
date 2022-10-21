@@ -1,5 +1,6 @@
 package com.example.novapo_practice05.service;
 
+import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.UserEntity;
 import com.example.novapo_practice05.domain.UserEntity.UserRole;
 import com.example.novapo_practice05.exception.CouldNotCreateUserException;
@@ -13,6 +14,10 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -22,22 +27,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private UserMapper userMapper;
 
-    private final UserMapper userMapper;
-
-    private final PasswordEncoder passwordEncoder;
-
-    public UserService(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.userMapper = userMapper;
-        this.passwordEncoder = passwordEncoder;
-    }
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public UserResponseDTO createUser(SignUpDTO userData) {
         System.out.println(userData.toString());
         UserEntity newUser = userMapper.toEntity(userData);
-        newUser.setRole(UserRole.CUSTOMER);
+        newUser.setRole(UserRole.ROLE_CUSTOMER);
         newUser.setCreatedAt(Instant.now());
         newUser = userRepository.save(userMapper.toEntity(userData));
         System.out.println(newUser.getCreatedAt().toString());
@@ -66,21 +67,29 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    //    @Override
+//    public UserDetails loadUserByUsername(String username) {
+//        // Kiểm tra xem user có tồn tại trong database không?
+//        UserEntity user = userRepository.findByEmail(username);
+//        if (user == null) {
+//            throw new UsernameNotFoundException(username);
+//        }
+//        return new CustomUserDetails(user);
+//    }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        String userName, password = null;
-//        List<GrantedAuthority> authorities = null;
-//        List<UserEntity> user = userRepository.findByEmail(username);
-//        if (user.size() == 0) {
-//            throw new UsernameNotFoundException("User details not found for the user : " + username);
-//        } else {
-//            userName = user.get(0).getEmail();
-//            password = user.get(0).getPassword();
-//            authorities = new ArrayList<>();
-//            authorities.add(new SimpleGrantedAuthority(user.get(0).getRole().toString()));
-//        }
-//        return new User(username, password, authorities);
-        return null;
+        String userName, password = null;
+        List<GrantedAuthority> authorities = null;
+        Optional<UserEntity> user = userRepository.findByEmail(username);
+        if (user.isEmpty()) {
+            throw new UsernameNotFoundException("User details not found for the user : " + username);
+        } else {
+            userName = user.get().getEmail();
+            password = user.get().getPassword();
+            authorities = new ArrayList<>();
+            authorities.add(new SimpleGrantedAuthority(user.get().getRole().toString()));
+        }
+        return new User(username, password, authorities);
     }
 
 //    private void validateUniqueEmail(String email) throws DuplicateEmailException {
@@ -132,7 +141,7 @@ public class UserService implements UserDetailsService {
         try {
             String hashPwd = passwordEncoder.encode(savedUser.getPassword());
             savedUser.setPassword(hashPwd);
-            savedUser.setRole(UserRole.ADMINISTRATOR);
+            savedUser.setRole(UserRole.ROLE_ADMINISTRATOR);
             savedUser = userRepository.save(savedUser);
             if (savedUser.getId() > 0) {
                 newUser = userMapper.toResponseDto(savedUser);
