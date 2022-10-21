@@ -1,0 +1,32 @@
+spring:
+  jpa:
+    generate-ddl: 'true'
+    hibernate:
+      ddl-auto: update
+  security:
+    user:
+      password: '123456'
+      name: novapo
+  datasource:
+    url: jdbc:postgresql://103.142.137.207:12345/novapo01
+    password: '123456'
+    username: root
+  output:
+    ansi:
+      enabled: always
+app:
+  jwt:
+    secret: abcdefghijklmnOPQRSTUVWXYZ
+logging:
+  file:
+    name: logging/mylog.log
+  level:
+    org:
+      springframework:
+        security:
+          web:
+            FilterChainProxy: DEBUG
+server:
+  error:
+    include-stacktrace: never
+  port: '8081'

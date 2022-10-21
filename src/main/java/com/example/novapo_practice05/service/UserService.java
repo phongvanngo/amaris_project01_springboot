@@ -1,5 +1,6 @@
 package com.example.novapo_practice05.service;
 
+import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.UserEntity;
 import com.example.novapo_practice05.domain.UserEntity.UserRole;
 import com.example.novapo_practice05.exception.CouldNotCreateUserException;
@@ -14,6 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -30,12 +34,6 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-//    public UserService(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder) {
-//        this.userRepository = userRepository;
-//        this.userMapper = userMapper;
-//        this.passwordEncoder = passwordEncoder;
-//    }
 
     public UserResponseDTO createUser(SignUpDTO userData) {
         System.out.println(userData.toString());
@@ -69,21 +67,29 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    //    @Override
+//    public UserDetails loadUserByUsername(String username) {
+//        // Kiểm tra xem user có tồn tại trong database không?
+//        UserEntity user = userRepository.findByEmail(username);
+//        if (user == null) {
+//            throw new UsernameNotFoundException(username);
+//        }
+//        return new CustomUserDetails(user);
+//    }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        String userName, password = null;
-//        List<GrantedAuthority> authorities = null;
-//        List<UserEntity> user = userRepository.findByEmail(username);
-//        if (user.size() == 0) {
-//            throw new UsernameNotFoundException("User details not found for the user : " + username);
-//        } else {
-//            userName = user.get(0).getEmail();
-//            password = user.get(0).getPassword();
-//            authorities = new ArrayList<>();
-//            authorities.add(new SimpleGrantedAuthority(user.get(0).getRole().toString()));
-//        }
-//        return new User(username, password, authorities);
-        return null;
+        String userName, password = null;
+        List<GrantedAuthority> authorities = null;
+        Optional<UserEntity> user = userRepository.findByEmail(username);
+        if (user.isEmpty()) {
+            throw new UsernameNotFoundException("User details not found for the user : " + username);
+        } else {
+            userName = user.get().getEmail();
+            password = user.get().getPassword();
+            authorities = new ArrayList<>();
+            authorities.add(new SimpleGrantedAuthority(user.get().getRole().toString()));
+        }
+        return new User(username, password, authorities);
     }
 
 //    private void validateUniqueEmail(String email) throws DuplicateEmailException {

@@ -20,21 +20,24 @@ public class ApplicationSecurity {
 
     @Autowired
     private UserRepository userRepo;
-    @Autowired
-    private JwtTokenFilter jwtTokenFilter;
 
     @Bean
-    public UserDetailsService userDetailsService() {
-        return new UserDetailsService() {
-
-            @Override
-            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                return userRepo.findByEmail(username)
-                    .orElseThrow(
-                        () -> new UsernameNotFoundException("User " + username + " not found"));
-            }
-        };
+    public JwtTokenFilter jwtAuthenticationFilter() {
+        return new JwtTokenFilter();
     }
+
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        return new UserDetailsService() {
+//
+//            @Override
+//            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//                return userRepo.findByEmail(username)
+//                    .orElseThrow(
+//                        () -> new UsernameNotFoundException("User " + username + " not found"));
+//            }
+//        };
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -53,6 +56,7 @@ public class ApplicationSecurity {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests()
+            .antMatchers("/item").hasRole("CUSTOMER")
             .antMatchers("/auth/login", "/docs/**", "/users", "/register","/register/admin").permitAll()
             .anyRequest().authenticated();
 
@@ -66,7 +70,7 @@ public class ApplicationSecurity {
                 }
             );
 
-        http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

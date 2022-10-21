@@ -20,7 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Data
 @Entity
 @Table(name = "users")
-public class UserEntity extends AbstractAuditingEntity implements UserDetails {
+public class UserEntity extends AbstractAuditingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,35 +46,6 @@ public class UserEntity extends AbstractAuditingEntity implements UserDetails {
     private UserRole role = UserRole.ROLE_CUSTOMER;
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private Set<Authority> authorities;
-
-    @Override
-    public String getUsername() {
-        return this.email;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-
-    public Set<GrantedAuthority> getAuthorities() {
-        return null;
-    }
 
     public enum UserRole {
         ROLE_CUSTOMER, ROLE_ADMINISTRATOR

@@ -1,6 +1,8 @@
 package com.example.novapo_practice05.web.rest;
 
+import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.UserEntity;
+import com.example.novapo_practice05.service.JwtTokenProvider;
 import com.example.novapo_practice05.service.JwtTokenService;
 import com.example.novapo_practice05.service.UserService;
 import com.example.novapo_practice05.service.dto.User.AuthDTO;
@@ -16,6 +18,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,7 +30,7 @@ public class UserController {
     @Autowired
     AuthenticationManager authManager;
     @Autowired
-    JwtTokenService jwtUtilService;
+    JwtTokenProvider jwtTokenProvider;
     @Autowired
     UserService userService;
 
@@ -60,29 +63,28 @@ public class UserController {
     }
 
     @PostMapping("/auth/login")
-    public ResponseEntity<?> login(@RequestBody @Valid AuthDTO request) {
-        try {
-            System.out.println(request);
+    public ResponseEntity<AuthResponseDTO> login(@RequestBody @Valid AuthDTO request) {
+        Authentication authentication = authManager.authenticate(
+            new UsernamePasswordAuthenticationToken(
+                request.getEmail(),
+                request.getPassword()
+            )
+        );
 
-//            Authentication authentication = authManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(
-//                    request.getEmail(), request.getPassword())
-//            );
-//
-//            System.out.println(authentication);
-//
-//            UserEntity user = (UserEntity) authentication.getPrincipal();
-            UserEntity user = new UserEntity();
-            user.setEmail(request.getEmail());
-            user.setPassword(request.getPassword());
-            String accessToken = jwtUtilService.generateAccessToken(user);
-            AuthResponseDTO response = new AuthResponseDTO(user.getEmail(), accessToken);
+        // Nếu không xảy ra exception tức là thông tin hợp lệ
+        // Set thông tin authentication vào Security Context
+        SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            return ResponseEntity.ok().body(response);
-
-        } catch (BadCredentialsException ex) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
+        // Trả về jwt cho người dùng.
+//        CustomUserDetails customUserDetails = new CustomUserDetails(new UserEntity())
+        UserEntity userLogin = new UserEntity();
+        userLogin.setPassword(request.getPassword());
+        userLogin.setEmail((request.getEmail()));
+        CustomUserDetails customUserDetails = new CustomUserDetails(userLogin);
+        String jwt = jwtTokenProvider.generateToken(customUserDetails);
+//        String jwt = jwtTokenProvider.generateToken((CustomUserDetails) authentication.getPrincipal());
+        AuthResponseDTO response = new AuthResponseDTO(request.getEmail(),jwt);
+        return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
 }
