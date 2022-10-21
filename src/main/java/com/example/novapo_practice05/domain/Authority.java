@@ -1,5 +1,6 @@
 package com.example.novapo_practice05.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,9 +20,7 @@ public class Authority {
     @GenericGenerator(name = "native",strategy = "native")
     private Long id;
 
+    @Column(name = "name",unique = true)
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private UserEntity user;
 }

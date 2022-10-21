@@ -56,7 +56,7 @@ public class ApplicationSecurity {
 
         http.authorizeRequests()
             .antMatchers("/item").hasRole("CUSTOMER")
-            .antMatchers("/auth/login", "/docs/**", "/users", "/register","/register/admin").permitAll()
+            .antMatchers("/auth/login", "/docs/**", "/users", "/register","/register/admin","/set-role").permitAll()
             .anyRequest().authenticated();
 
         http.exceptionHandling()

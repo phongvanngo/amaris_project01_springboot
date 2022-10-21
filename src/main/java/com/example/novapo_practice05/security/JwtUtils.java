@@ -1,7 +1,6 @@
 package com.example.novapo_practice05.security;
 
 import com.example.novapo_practice05.domain.CustomUserDetails;
-import com.example.novapo_practice05.domain.UserEntity;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import java.util.Collection;
@@ -10,7 +9,6 @@ import java.util.HashSet;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 public class JwtUtils {
     private static final long EXPIRE_DURATION = 24 * 60 * 60 * 1000; // 24 hour

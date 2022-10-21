@@ -9,6 +9,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
@@ -48,11 +51,30 @@ public class UserEntity extends AbstractAuditingEntity {
     @Column(name = "account_number")
     private String accountNumber;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @ManyToMany
+    @JoinTable(
+        name = "users_authorities",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
     private Set<Authority> authorities;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @ManyToMany
+    @JoinTable(
+        name = "users_roles",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
     private Set<UserRole> roles;
+
+
+//    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+//    private Set<Authority> authorities;
+//
+//    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+//    private Set<UserRole> roles;
+
+
 
 }
 

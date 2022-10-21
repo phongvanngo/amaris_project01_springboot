@@ -7,6 +7,7 @@ import com.example.novapo_practice05.service.JwtTokenService;
 import com.example.novapo_practice05.service.UserService;
 import com.example.novapo_practice05.service.dto.User.AuthDTO;
 import com.example.novapo_practice05.service.dto.User.AuthResponseDTO;
+import com.example.novapo_practice05.service.dto.User.SetRoleDTO;
 import com.example.novapo_practice05.service.dto.User.SignUpDTO;
 import com.example.novapo_practice05.service.dto.User.UserResponseDTO;
 import java.util.List;
@@ -52,9 +53,18 @@ public class UserController {
     }
 
     @PostMapping("/register/admin")
-    public ResponseEntity<UserResponseDTO> egisterAdmin(@RequestBody SignUpDTO request) {
+    public ResponseEntity<UserResponseDTO> registerAdmin(@RequestBody SignUpDTO request) {
 //        return request.toString();
+        System.out.println(request);
         return new ResponseEntity<>(userService.registerAdminUser(request), HttpStatus.OK);
+    }
+
+    @PostMapping("/set-role")
+    public ResponseEntity<UserResponseDTO> setRole(@RequestBody SetRoleDTO setRoleDTO) {
+//        return request.toString();
+        System.out.println(setRoleDTO);
+
+        return new ResponseEntity<>(userService.setRole(setRoleDTO), HttpStatus.OK);
     }
 
     @GetMapping("/users")

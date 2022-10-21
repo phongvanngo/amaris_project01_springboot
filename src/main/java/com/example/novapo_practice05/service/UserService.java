@@ -2,18 +2,25 @@ package com.example.novapo_practice05.service;
 
 import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.UserEntity;
+import com.example.novapo_practice05.domain.UserRole;
 import com.example.novapo_practice05.exception.CouldNotCreateUserException;
 import com.example.novapo_practice05.exception.DuplicateEmailException;
 import com.example.novapo_practice05.exception.UserNotFoundException;
+import com.example.novapo_practice05.exception.UserRoleNotFoundException;
 import com.example.novapo_practice05.repository.UserRepository;
+import com.example.novapo_practice05.service.dto.User.SetRoleDTO;
 import com.example.novapo_practice05.service.dto.User.SignUpDTO;
 import com.example.novapo_practice05.service.dto.User.UserResponseDTO;
 import com.example.novapo_practice05.service.mapper.UserMapper;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import javax.management.relation.RoleNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -30,6 +37,11 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private UserRoleService userRoleService;
+
+
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -129,6 +141,22 @@ public class UserService implements UserDetailsService {
             throw new CouldNotCreateUserException(savedUser.getEmail());
         }
         return newUser;
+    }
+
+    public UserResponseDTO setRole(SetRoleDTO setRoleDTO) {
+        Optional<UserRole> userRole = userRoleService.getRoleByName(setRoleDTO.getRoleName());
+        if (userRole.isEmpty()) throw new UserRoleNotFoundException(setRoleDTO.getRoleName());
+        Optional<UserEntity> user = userRepository.findById(setRoleDTO.getUserID());
+        if (user.isEmpty()) throw new UserNotFoundException(setRoleDTO.getUserID());
+
+        System.out.println(userRole);
+        System.out.println(user);
+
+        Set<UserRole> userRoles = new HashSet<>(user.get().getRoles());
+        userRoles.add(userRole.get());
+        user.get().setRoles(userRoles);
+
+        return userMapper.toResponseDto(userRepository.save(user.get()));
     }
 
 }

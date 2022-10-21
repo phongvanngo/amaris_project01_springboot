@@ -11,7 +11,8 @@ public class UserResponseDTO {
     private Long id;
     private String firstName;
     private String lastName;
-    private String phoneNumber;    private String email;
+    private String phoneNumber;
+    private String email;
     private String accountNumber;
     private Set<UserRole> roles;
     private Instant createdAt;

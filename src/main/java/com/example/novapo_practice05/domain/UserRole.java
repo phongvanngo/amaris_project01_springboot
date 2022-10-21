@@ -12,16 +12,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Data
-@Table(name="authorities")
+@Table(name="roles")
 public class UserRole {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private Long id;
 
+    @JoinColumn(name = "name",unique = true)
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private UserEntity user;
 }
