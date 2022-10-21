@@ -1,11 +1,10 @@
 package com.example.novapo_practice05.security;
 
 import com.example.novapo_practice05.filter.JwtTokenFilter;
-import com.example.novapo_practice05.repository.UserRepository;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -14,29 +13,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
 @Configuration
 public class ApplicationSecurity {
-
-    @Autowired
-    private UserRepository userRepo;
 
     @Bean
     public JwtTokenFilter jwtAuthenticationFilter() {
         return new JwtTokenFilter();
     }
-
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        return new UserDetailsService() {
-//
-//            @Override
-//            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//                return userRepo.findByEmail(username)
-//                    .orElseThrow(
-//                        () -> new UsernameNotFoundException("User " + username + " not found"));
-//            }
-//        };
-//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -55,8 +39,9 @@ public class ApplicationSecurity {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests()
-            .antMatchers("/item").hasRole("ADMIN")
-            .antMatchers("/auth/login", "/docs/**", "/users", "/register","/register/admin","/set-role").permitAll()
+//            .antMatchers("/item").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET,"/item","/catalog").permitAll()
+            .antMatchers("/auth/login", "/register").permitAll()
             .anyRequest().authenticated();
 
         http.exceptionHandling()

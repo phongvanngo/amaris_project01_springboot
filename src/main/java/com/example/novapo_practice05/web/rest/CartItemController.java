@@ -3,6 +3,7 @@ package com.example.novapo_practice05.web.rest;
 import com.example.novapo_practice05.service.CartItemService;
 import com.example.novapo_practice05.service.dto.CartItem.CartItemDTO;
 import com.example.novapo_practice05.service.dto.CartItem.ResponseCartItemDTO;
+import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,7 @@ public class CartItemController {
     CartItemService cartItemService;
 
     @PostMapping("/cart")
+    @RolesAllowed({"ROLE_CUSTOMER"})
     public ResponseEntity<ResponseCartItemDTO> addToCart(@RequestBody @Valid CartItemDTO cartItem) {
         ResponseCartItemDTO responseCartItemDTO = cartItemService.addToCart(cartItem);
         return new ResponseEntity<>(responseCartItemDTO, HttpStatus.OK);

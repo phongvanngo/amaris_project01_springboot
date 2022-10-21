@@ -45,15 +45,6 @@ public class UserService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public UserResponseDTO createUser(SignUpDTO userData) {
-        System.out.println(userData.toString());
-        UserEntity newUser = userMapper.toEntity(userData);
-        newUser.setCreatedAt(Instant.now());
-        newUser = userRepository.save(userMapper.toEntity(userData));
-        System.out.println(newUser.getCreatedAt().toString());
-        return userMapper.toResponseDto(newUser);
-    }
-
     public List<UserResponseDTO> getAllUsers() {
         List<UserEntity> users = userRepository.findAll();
         List<UserResponseDTO> results = new ArrayList<UserResponseDTO>();
@@ -97,8 +88,6 @@ public class UserService implements UserDetailsService {
 
 
     private boolean isEmailUnique(String email) {
-        var user = userRepository.findByEmail(email);
-//        System.out.println(user.get());
         return userRepository.findByEmail(email).isEmpty();
     }
 
@@ -153,9 +142,6 @@ public class UserService implements UserDetailsService {
         if (user.isEmpty()) {
             throw new UserNotFoundException(setRoleDTO.getUserID());
         }
-
-        System.out.println(userRole);
-        System.out.println(user);
 
         Set<UserRole> userRoles = new HashSet<>(user.get().getRoles());
         userRoles.add(userRole.get());

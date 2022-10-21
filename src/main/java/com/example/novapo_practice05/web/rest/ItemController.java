@@ -4,6 +4,7 @@ import com.example.novapo_practice05.service.ItemService;
 import com.example.novapo_practice05.service.dto.Item.ItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ResponseItemDTO;
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ public class ItemController {
     ItemService itemService;
 
     @PostMapping()
+    @RolesAllowed("ROLE_ADMIN")
     public ResponseItemDTO createItem(@RequestBody ItemDTO itemDTO) {
         return itemService.createItem(itemDTO);
     }
@@ -31,15 +33,16 @@ public class ItemController {
         List<ResponseItemDTO> results = itemService.getAllItems();
         System.out.println("hello");
         return results;
-//        return itemService.getAllItems();
     }
 
     @PutMapping("/{itemID}")
+    @RolesAllowed("ROLE_ADMIN")
     public ResponseItemDTO updateItem (@RequestBody ItemDTO itemDTO, @PathVariable long itemID) {
         return itemService.updateItem(itemDTO,itemID);
     }
 
     @DeleteMapping("/{itemID}")
+    @RolesAllowed("ROLE_ADMIN")
     public ResponseItemDTO deleteItem (@PathVariable long itemID) {
         return itemService.deleteItem(itemID);
     }

@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -33,10 +34,6 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     @Autowired
     private JwtUtils jwtUtils;
 
-
-    @Autowired
-    private UserService customUserDetailsService;
-
     @Override
     protected void doFilterInternal(HttpServletRequest request,
         HttpServletResponse response, FilterChain filterChain)
@@ -49,9 +46,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 String authorities = jwtUtils.getAuthorities(jwt);
                 String roles = jwtUtils.getRoles(jwt);
 
-                System.out.println(authorities+roles);
-
-//                UserDetails userDetails = customUserDetailsService.loadUserByUsername(email);
+                System.out.println(authorities + roles);
 
                 UsernamePasswordAuthenticationToken
                     authentication = new UsernamePasswordAuthenticationToken(username, null,
@@ -60,17 +55,9 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
 
-//                if (userDetails != null) {
-//                    UsernamePasswordAuthenticationToken
-//                        authentication = new UsernamePasswordAuthenticationToken(userDetails, null,
-//                        userDetails.getAuthorities());
-//                    authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-//
-//                    SecurityContextHolder.getContext().setAuthentication(authentication);
-//                }
             }
         } catch (Exception ex) {
-            logger.error("failed on set user authentication", ex);
+            throw new BadCredentialsException("Invalid Token received!");
         }
 
         filterChain.doFilter(request, response);

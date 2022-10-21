@@ -4,6 +4,7 @@ import com.example.novapo_practice05.service.CatalogService;
 import com.example.novapo_practice05.service.dto.Catalog.CatalogDTO;
 import com.example.novapo_practice05.service.dto.Catalog.ResponseCatalogDTO;
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,16 +28,19 @@ public class CatalogController {
     }
 
     @PostMapping()
+    @RolesAllowed({"ROLE_ADMIN","ROLE_EDITOR"})
     public ResponseCatalogDTO createCatalog(@RequestBody CatalogDTO catalogDTO) {
         return catalogService.createCatalog(catalogDTO);
     }
 
     @PutMapping("/{catalogID}")
+    @RolesAllowed({"ROLE_ADMIN","ROLE_EDITOR"})
     public ResponseCatalogDTO updateCatalog(@RequestBody CatalogDTO catalogDTO, @PathVariable long catalogID) {
         return catalogService.updateCatalog(catalogDTO, catalogID);
     }
 
     @DeleteMapping("/{catalogID}")
+    @RolesAllowed({"ROLE_ADMIN"})
     public ResponseCatalogDTO deleteCatalog(@PathVariable long catalogID) {
         return catalogService.deleteCatalog(catalogID);
     }
