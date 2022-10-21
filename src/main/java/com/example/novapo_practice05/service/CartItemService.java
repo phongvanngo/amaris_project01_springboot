@@ -54,9 +54,6 @@ public class CartItemService {
 
         if (isUserExist && isItemExist) {
             CartItem newCartItem;
-//            Optional<CartItem> existingCartItem = cartItemRepository.findCartItemByUserAndItem(userID,itemID);
-
-//            Optional<CartItem> existingCartItem = Optional.ofNullable(cartItemRepository.findCartItemByUserAndItem(userID,itemID));
             Optional<CartItem> existingCartItem = cartItemRepository.findCartItemByUserAndItem(userID,itemID);
 
             int requestQuantity = cartItemDTO.getQuantity();

@@ -97,6 +97,10 @@ public class UserService implements UserDetailsService {
         }
         UserEntity savedUser = userMapper.toEntity(signUpDTO);
         UserResponseDTO newUser = null;
+
+//        String myid = userRepository.generateUserId();
+//        System.out.println(myid);
+
         try {
             String hashPwd = passwordEncoder.encode(savedUser.getPassword());
             savedUser.setPassword(hashPwd);

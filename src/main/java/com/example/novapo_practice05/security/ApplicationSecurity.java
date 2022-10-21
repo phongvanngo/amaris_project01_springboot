@@ -40,6 +40,7 @@ public class ApplicationSecurity {
 
         http.authorizeRequests()
 //            .antMatchers("/item").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET,"/test", "/test/**").permitAll()
             .antMatchers(HttpMethod.GET,"/item","/catalog").permitAll()
             .antMatchers("/auth/login", "/register").permitAll()
             .anyRequest().authenticated();

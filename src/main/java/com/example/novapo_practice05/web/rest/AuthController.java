@@ -1,9 +1,6 @@
 package com.example.novapo_practice05.web.rest;
 
-import com.example.novapo_practice05.domain.CustomUserDetails;
-import com.example.novapo_practice05.domain.UserEntity;
 import com.example.novapo_practice05.service.AuthService;
-import com.example.novapo_practice05.service.JwtTokenProvider;
 import com.example.novapo_practice05.service.UserService;
 import com.example.novapo_practice05.service.dto.User.AuthDTO;
 import com.example.novapo_practice05.service.dto.User.AuthResponseDTO;
@@ -13,10 +10,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
