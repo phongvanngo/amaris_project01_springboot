@@ -2,7 +2,6 @@ package com.example.novapo_practice05.service;
 
 import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.UserEntity;
-import com.example.novapo_practice05.domain.UserEntity.UserRole;
 import com.example.novapo_practice05.exception.CouldNotCreateUserException;
 import com.example.novapo_practice05.exception.DuplicateEmailException;
 import com.example.novapo_practice05.exception.UserNotFoundException;
@@ -38,7 +37,6 @@ public class UserService implements UserDetailsService {
     public UserResponseDTO createUser(SignUpDTO userData) {
         System.out.println(userData.toString());
         UserEntity newUser = userMapper.toEntity(userData);
-        newUser.setRole(UserRole.ROLE_CUSTOMER);
         newUser.setCreatedAt(Instant.now());
         newUser = userRepository.save(userMapper.toEntity(userData));
         System.out.println(newUser.getCreatedAt().toString());
@@ -66,16 +64,6 @@ public class UserService implements UserDetailsService {
             throw new UserNotFoundException(id);
         }
     }
-
-    //    @Override
-//    public UserDetails loadUserByUsername(String username) {
-//        // Kiểm tra xem user có tồn tại trong database không?
-//        UserEntity user = userRepository.findByEmail(username);
-//        if (user == null) {
-//            throw new UsernameNotFoundException(username);
-//        }
-//        return new CustomUserDetails(user);
-//    }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         String userName, password = null;
@@ -87,22 +75,12 @@ public class UserService implements UserDetailsService {
             userName = user.get().getEmail();
             password = user.get().getPassword();
             authorities = new ArrayList<>();
-            authorities.add(new SimpleGrantedAuthority(user.get().getRole().toString()));
+//            authorities.add(new SimpleGrantedAuthority(user.get().getRole().toString()));
+            authorities.add(new SimpleGrantedAuthority("ROLE_ADMINISTRATOR"));
         }
         return new User(username, password, authorities);
     }
 
-//    private void validateUniqueEmail(String email) throws DuplicateEmailException {
-//        List<UserEntity> user = userRepository.findByEmail(email);
-//        if (user.size() > 0) {
-//            throw new DuplicateEmailException(email);
-//        }
-//    }
-//
-//    private boolean isEmailUnique(String email) {
-//        List<UserEntity> user = userRepository.findByEmail(email);
-//        return user.size() == 0;
-//    }
 
     private boolean isEmailUnique(String email) {
         var user = userRepository.findByEmail(email);
@@ -141,7 +119,7 @@ public class UserService implements UserDetailsService {
         try {
             String hashPwd = passwordEncoder.encode(savedUser.getPassword());
             savedUser.setPassword(hashPwd);
-            savedUser.setRole(UserRole.ROLE_ADMINISTRATOR);
+//            savedUser.setRole(UserRole.ROLE_ADMINISTRATOR);
             savedUser = userRepository.save(savedUser);
             if (savedUser.getId() > 0) {
                 newUser = userMapper.toResponseDto(savedUser);

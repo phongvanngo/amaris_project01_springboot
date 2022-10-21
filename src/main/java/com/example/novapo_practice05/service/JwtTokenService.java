@@ -25,7 +25,7 @@ public class JwtTokenService {
 
     public String generateAccessToken(UserEntity user) {
         return Jwts.builder()
-            .setSubject(String.format("%s,%s,%s", user.getId(), user.getEmail(),user.getRole()))
+            .setSubject(String.format("%s,%s,%s", user.getId(), user.getEmail(),user.getRoles()))
             .setIssuer("CodeJava")
             .setIssuedAt(new Date())
             .setExpiration(new Date(System.currentTimeMillis() + EXPIRE_DURATION))

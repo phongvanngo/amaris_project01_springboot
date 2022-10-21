@@ -36,16 +36,12 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         HttpServletResponse response, FilterChain filterChain)
         throws ServletException, IOException {
         try {
-            // Lấy jwt từ request
             String jwt = getJwtFromRequest(request);
 
             if (StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt)) {
-                // Lấy id user từ chuỗi jwt
                 String email = tokenProvider.getEmailFromJWT(jwt);
-                // Lấy thông tin người dùng từ id
                 UserDetails userDetails = customUserDetailsService.loadUserByUsername(email);
                 if(userDetails != null) {
-                    // Nếu người dùng hợp lệ, set thông tin cho Seturity Context
                     UsernamePasswordAuthenticationToken
                         authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));

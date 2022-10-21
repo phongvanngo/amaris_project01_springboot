@@ -1,6 +1,5 @@
 package com.example.novapo_practice05.service.dto.User;
 
-import com.example.novapo_practice05.domain.UserEntity.UserRole;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
