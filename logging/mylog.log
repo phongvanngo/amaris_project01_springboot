@@ -8366,3 +8366,6 @@ Security filter chain: [
 
 2022-10-24 03:18:07.051 DEBUG 11516 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error?catalogID=3&description=c42ea42da&limit=100&page=0
 2022-10-24 03:18:07.051 DEBUG 11516 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error?catalogID=3&description=c42ea42da&limit=100&page=0
+2022-10-24 03:20:39.280  INFO 11516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 03:20:39.281  INFO 11516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown initiated...
+2022-10-24 03:20:39.286  INFO 11516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown completed.
