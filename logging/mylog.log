@@ -1045,3 +1045,1316 @@ Security filter chain: [
 2022-10-24 00:31:22.027  INFO 1984 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
 2022-10-24 00:31:22.027  INFO 1984 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
 2022-10-24 00:31:25.483  INFO 1984 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:39:12.240  INFO 1984 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2022-10-24 00:39:12.270  INFO 1984 --- [Thread-18] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:39:12.271  INFO 1984 --- [Thread-18] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-24 00:39:12.277  INFO 1984 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:39:12.278  INFO 1984 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-10-24 00:39:12.281  INFO 1984 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-10-24 00:39:12.426  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:39:12.426  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:39:12.927  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:39:13.138  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:39:13.391  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:39:13.395  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:39:13.396  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:39:13.459  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:39:13.460  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1031 ms
+2022-10-24 00:39:13.621  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:39:13.628  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-10-24 00:39:13.760  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-10-24 00:39:13.761  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:39:14.412  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:39:14.413  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:39:15.121  WARN 1984 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartItemService' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\service\CartItemService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.service.CartItemService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@672d4195]
+2022-10-24 00:39:15.122  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:39:15.122  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-10-24 00:39:15.126  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-10-24 00:39:15.128  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:39:15.137  INFO 1984 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 00:39:15.144 ERROR 1984 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartItemService' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\service\CartItemService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.service.CartItemService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@672d4195]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.4.jar:2.7.4]
+	at com.example.novapo_practice05.NovapoPractice05Application.main(NovapoPractice05Application.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.service.CartItemService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@672d4195]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:407) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:388) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:335) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/example/novapo_practice05/service/ItemService
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3353) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2424) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738) ~[spring-core-5.3.23.jar:5.3.23]
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.novapo_practice05.service.ItemService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 28 common frames omitted
+
+2022-10-24 00:39:19.891  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:39:19.891  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:39:20.999  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:39:21.125  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:39:21.390  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:39:21.391  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:39:21.391  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:39:21.429  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:39:21.429  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1534 ms
+2022-10-24 00:39:21.584  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:39:21.607  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-10-24 00:39:21.734  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-10-24 00:39:21.735  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:39:22.301  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:39:22.301  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:39:22.864  WARN 1984 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartItemService': Unsatisfied dependency expressed through field 'itemService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.novapo_practice05.service.ItemService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-10-24 00:39:22.865  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:39:22.865  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-10-24 00:39:22.868  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-10-24 00:39:22.868  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:39:22.874  INFO 1984 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 00:39:22.889 ERROR 1984 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field itemService in com.example.novapo_practice05.service.CartItemService required a bean of type 'com.example.novapo_practice05.service.ItemService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.novapo_practice05.service.ItemService' in your configuration.
+
+2022-10-24 00:39:24.426  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:39:24.426  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:39:24.961  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:39:25.056  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:39:25.303  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:39:25.304  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:39:25.305  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:39:25.333  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:39:25.333  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
+2022-10-24 00:39:25.432  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:39:25.440  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-10-24 00:39:25.502  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-10-24 00:39:25.502  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:39:25.892  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:39:25.892  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:39:26.552  INFO 1984 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f690f34, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1619f015, org.springframework.security.web.context.SecurityContextPersistenceFilter@459935e0, org.springframework.security.web.header.HeaderWriterFilter@a5bd38e, org.springframework.security.web.authentication.logout.LogoutFilter@55a423ee, com.example.novapo_practice05.filter.JwtTokenFilter@2b4c4a85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d5e96a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79cdf720, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@599d2e90, org.springframework.security.web.session.SessionManagementFilter@113628b1, org.springframework.security.web.access.ExceptionTranslationFilter@ccc9c61, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38b3850e]
+2022-10-24 00:39:26.557  WARN 1984 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-24 00:39:26.618  WARN 1984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 00:39:27.062  INFO 1984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-24 00:39:27.076  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-24 00:39:27.082  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 2.723 seconds (JVM running for 4913.338)
+2022-10-24 00:39:27.084  INFO 1984 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-24 00:45:35.983  INFO 1984 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2022-10-24 00:45:36.010  INFO 1984 --- [Thread-25] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:45:36.016  INFO 1984 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:45:36.017  INFO 1984 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-10-24 00:45:36.020  INFO 1984 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-10-24 00:45:36.159  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:45:36.159  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:45:36.498  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:45:36.559  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:45:36.821  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:45:36.822  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:45:36.822  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:45:36.849  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:45:36.849  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
+2022-10-24 00:45:36.965  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:45:36.973  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-10-24 00:45:37.045  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-10-24 00:45:37.046  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:45:37.453  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:45:37.454  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:45:37.990  INFO 1984 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ec865, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72cd14c8, org.springframework.security.web.context.SecurityContextPersistenceFilter@3977a9c, org.springframework.security.web.header.HeaderWriterFilter@5f5fe42a, org.springframework.security.web.authentication.logout.LogoutFilter@27e4df94, com.example.novapo_practice05.filter.JwtTokenFilter@63aafba7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16e58247, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36bb4a05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33e193ed, org.springframework.security.web.session.SessionManagementFilter@7e6aecf7, org.springframework.security.web.access.ExceptionTranslationFilter@641e2f36, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6739e91d]
+2022-10-24 00:45:37.993  WARN 1984 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-24 00:45:38.043  WARN 1984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 00:45:38.394  INFO 1984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-24 00:45:38.409  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-24 00:45:38.413  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 2.293 seconds (JVM running for 5284.668)
+2022-10-24 00:45:38.415  INFO 1984 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-24 00:45:40.894  INFO 1984 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-10-24 00:45:40.918  INFO 1984 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:45:40.923  INFO 1984 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:45:40.923  INFO 1984 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2022-10-24 00:45:40.925  INFO 1984 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2022-10-24 00:45:41.049  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:45:41.049  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:45:41.372  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:45:41.432  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:45:41.621  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:45:41.622  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:45:41.622  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:45:41.649  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:45:41.649  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 597 ms
+2022-10-24 00:45:41.743  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:45:41.750  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2022-10-24 00:45:41.868  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2022-10-24 00:45:41.868  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:45:42.268  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:45:42.268  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:45:42.839  INFO 1984 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23378555, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69493583, org.springframework.security.web.context.SecurityContextPersistenceFilter@41c1e87d, org.springframework.security.web.header.HeaderWriterFilter@39d450d4, org.springframework.security.web.authentication.logout.LogoutFilter@2d09890e, com.example.novapo_practice05.filter.JwtTokenFilter@41f1491b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71ac1e99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ae5b288, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5600737a, org.springframework.security.web.session.SessionManagementFilter@36a7e1de, org.springframework.security.web.access.ExceptionTranslationFilter@22824bef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43d0171d]
+2022-10-24 00:45:42.844  WARN 1984 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-24 00:45:42.892  WARN 1984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 00:45:43.218  INFO 1984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-24 00:45:43.231  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-24 00:45:43.237  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 2.222 seconds (JVM running for 5289.492)
+2022-10-24 00:45:43.239  INFO 1984 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-24 00:46:57.265  INFO 1984 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:46:57.265  INFO 1984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2022-10-24 00:46:57.268  INFO 1984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2022-10-24 00:47:02.616  INFO 11516 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 11516 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:47:02.619  INFO 11516 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:47:02.730  INFO 11516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-24 00:47:02.730  INFO 11516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-24 00:47:04.324  INFO 11516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:47:04.470  INFO 11516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:47:06.204  INFO 11516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:47:06.226  INFO 11516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:47:06.228  INFO 11516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:47:06.388  INFO 11516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:47:06.389  INFO 11516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3650 ms
+2022-10-24 00:47:06.877  INFO 11516 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:47:07.002  INFO 11516 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-24 00:47:07.297  INFO 11516 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-24 00:47:07.531  INFO 11516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-24 00:47:07.872  INFO 11516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-24 00:47:07.913  INFO 11516 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:47:09.620  INFO 11516 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:47:09.632  INFO 11516 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:47:11.522  INFO 11516 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66dd9696, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4deae8fc, org.springframework.security.web.context.SecurityContextPersistenceFilter@188654c, org.springframework.security.web.header.HeaderWriterFilter@162f21ed, org.springframework.security.web.authentication.logout.LogoutFilter@2bc26d40, com.example.novapo_practice05.filter.JwtTokenFilter@3bc49a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@325e1452, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7125b335, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56267cd6, org.springframework.security.web.session.SessionManagementFilter@4c9e6f52, org.springframework.security.web.access.ExceptionTranslationFilter@234a529f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fae864f]
+2022-10-24 00:47:11.540  WARN 11516 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-24 00:47:11.699  WARN 11516 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 00:47:12.749  INFO 11516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-24 00:47:12.803  INFO 11516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-24 00:47:12.822  INFO 11516 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 11.076 seconds (JVM running for 11.992)
+2022-10-24 00:48:01.831  INFO 11516 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-24 00:48:01.832  INFO 11516 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-24 00:48:01.835  INFO 11516 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-10-24 00:48:01.855  INFO 11516 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8081
+connection: keep-alive
+sec-ch-ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.52
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,vi;q=0.8
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:48:01.865 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2022-10-24 00:48:01.905  INFO 11516 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@5a9d66b9
+
+servletPath:/error
+pathInfo:null
+headers: 
+host: localhost:8081
+connection: keep-alive
+sec-ch-ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.52
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,vi;q=0.8
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:48:01.906 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2022-10-24 00:48:01.908 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2022-10-24 00:48:28.087  INFO 11516 --- [http-nio-8081-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item?limit=100&page=0':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/item
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: e79e4b69-d95d-4cee-928a-1a06c76addb1
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:48:28.088 DEBUG 11516 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /item?limit=100&page=0
+2022-10-24 00:48:28.089 DEBUG 11516 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /item?limit=100&page=0
+2022-10-24 00:48:28.165  INFO 11516 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
+2022-10-24 00:48:28.179  INFO 11516 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:48:32.008  INFO 11516 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:48:39.487  INFO 11516 --- [http-nio-8081-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/users':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/users
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX0VESVRPUiIsImlhdCI6MTY2NjU4MjgyMSwiZXhwIjoxNjY2NjY5MjIxfQ.Q9mlcj-HR2HTXLkhEAlYh9k_EX2kL_29fxuuRPVhgGMcQIpDnJpITaG3Ho8-x6ODwMZWP6JdehtJrU-zTwK1LQ
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 0db06e8e-bafd-4bd8-bf67-202c1fccb653
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:48:39.488 DEBUG 11516 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /users
+2022-10-24 00:48:39.584 DEBUG 11516 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /users
+2022-10-24 00:48:39.587  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(List com.example.novapo_practice05.web.rest.UserController.getAllUsers())
+2022-10-24 00:48:39.595  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(List com.example.novapo_practice05.service.UserService.getAllUsers())
+2022-10-24 00:48:39.771  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : after called execution(List com.example.novapo_practice05.service.UserService.getAllUsers())
+2022-10-24 00:48:51.876  INFO 11516 --- [http-nio-8081-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/set-role':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/set-role
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX0VESVRPUiIsImlhdCI6MTY2NjU4MjgyMSwiZXhwIjoxNjY2NjY5MjIxfQ.Q9mlcj-HR2HTXLkhEAlYh9k_EX2kL_29fxuuRPVhgGMcQIpDnJpITaG3Ho8-x6ODwMZWP6JdehtJrU-zTwK1LQ
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 5d7ae54d-1deb-4572-bde9-5655f3e012f2
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 55
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:48:51.877 DEBUG 11516 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /set-role
+2022-10-24 00:48:51.882 DEBUG 11516 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /set-role
+2022-10-24 00:48:51.919  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseEntity com.example.novapo_practice05.web.rest.UserController.setRole(SetRoleDTO))
+2022-10-24 00:48:51.921  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(UserResponseDTO com.example.novapo_practice05.service.UserService.setRole(SetRoleDTO))
+2022-10-24 00:48:51.922  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(Optional com.example.novapo_practice05.service.UserRoleService.getRoleByName(String))
+2022-10-24 00:48:51.975  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(Optional com.example.novapo_practice05.service.UserRoleService.getRoleByName(String))
+2022-10-24 00:48:51.996  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(UserResponseDTO com.example.novapo_practice05.service.UserService.setRole(SetRoleDTO))
+2022-10-24 00:48:52.020  WARN 11516 --- [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.novapo_practice05.exception.UserNotFoundException: User with Id 100 not found]
+2022-10-24 00:49:02.351  INFO 11516 --- [http-nio-8081-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/api/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/api/cart
+pathInfo:null
+headers: 
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 0a51faf4-4fd1-4f88-bc1f-59a0d2d5ce34
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:02.352 DEBUG 11516 --- [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/cart
+2022-10-24 00:49:02.354  INFO 11516 --- [http-nio-8081-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@63991f7b
+
+servletPath:/error
+pathInfo:null
+headers: 
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 0a51faf4-4fd1-4f88-bc1f-59a0d2d5ce34
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:02.355 DEBUG 11516 --- [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:49:02.356 DEBUG 11516 --- [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-24 00:49:15.041  INFO 11516 --- [http-nio-8081-exec-9] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/api/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/api/cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiZWRpdG9yQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiW10iLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9FRElUT1IiLCJpYXQiOjE2NjY1ODMxOTQsImV4cCI6MTY2NjY2OTU5NH0.rrJVY3_R8rE8v_-cLvDq5VyemQCS4tVonmYX6CeilENitpErXhZopmMK00wUwTvuwnCxB_UjCUmbhdCG7d-xQA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 8c819ed9-1a9f-4865-8874-99ad81d9798e
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:15.042 DEBUG 11516 --- [http-nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/cart
+2022-10-24 00:49:15.050 DEBUG 11516 --- [http-nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/cart
+2022-10-24 00:49:15.060  INFO 11516 --- [http-nio-8081-exec-9] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@456ef218
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiZWRpdG9yQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiW10iLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9FRElUT1IiLCJpYXQiOjE2NjY1ODMxOTQsImV4cCI6MTY2NjY2OTU5NH0.rrJVY3_R8rE8v_-cLvDq5VyemQCS4tVonmYX6CeilENitpErXhZopmMK00wUwTvuwnCxB_UjCUmbhdCG7d-xQA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 8c819ed9-1a9f-4865-8874-99ad81d9798e
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:15.060 DEBUG 11516 --- [http-nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:49:15.061 DEBUG 11516 --- [http-nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-24 00:49:37.334  INFO 11516 --- [http-nio-8081-exec-10] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiZWRpdG9yQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiW10iLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9FRElUT1IiLCJpYXQiOjE2NjY1ODMxOTQsImV4cCI6MTY2NjY2OTU5NH0.rrJVY3_R8rE8v_-cLvDq5VyemQCS4tVonmYX6CeilENitpErXhZopmMK00wUwTvuwnCxB_UjCUmbhdCG7d-xQA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 6c0de297-e1aa-49b9-a415-3674ba4db7f3
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:37.340 DEBUG 11516 --- [http-nio-8081-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /cart
+2022-10-24 00:49:37.347 DEBUG 11516 --- [http-nio-8081-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /cart
+2022-10-24 00:49:37.415  INFO 11516 --- [http-nio-8081-exec-10] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@559fbe4d
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiZWRpdG9yQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiW10iLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9FRElUT1IiLCJpYXQiOjE2NjY1ODMxOTQsImV4cCI6MTY2NjY2OTU5NH0.rrJVY3_R8rE8v_-cLvDq5VyemQCS4tVonmYX6CeilENitpErXhZopmMK00wUwTvuwnCxB_UjCUmbhdCG7d-xQA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 6c0de297-e1aa-49b9-a415-3674ba4db7f3
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:37.415 DEBUG 11516 --- [http-nio-8081-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:49:37.415 DEBUG 11516 --- [http-nio-8081-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-24 00:49:56.857  INFO 11516 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX0VESVRPUiIsImlhdCI6MTY2NjU4MjgyMSwiZXhwIjoxNjY2NjY5MjIxfQ.Q9mlcj-HR2HTXLkhEAlYh9k_EX2kL_29fxuuRPVhgGMcQIpDnJpITaG3Ho8-x6ODwMZWP6JdehtJrU-zTwK1LQ
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 4a501839-fda5-459c-8fac-7ac6482864a1
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:56.858 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /cart
+2022-10-24 00:49:56.862 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /cart
+2022-10-24 00:49:56.865  INFO 11516 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@53341d8c
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9BRE1JTixST0xFX0VESVRPUiIsImlhdCI6MTY2NjU4MjgyMSwiZXhwIjoxNjY2NjY5MjIxfQ.Q9mlcj-HR2HTXLkhEAlYh9k_EX2kL_29fxuuRPVhgGMcQIpDnJpITaG3Ho8-x6ODwMZWP6JdehtJrU-zTwK1LQ
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 4a501839-fda5-459c-8fac-7ac6482864a1
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:49:56.865 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:49:56.867 DEBUG 11516 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-24 00:50:19.445  INFO 11516 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9DVVNUT01FUiIsImlhdCI6MTY2NjM0NjU1MSwiZXhwIjoxNjY2NDMyOTUxfQ.W490vedBiI_IO5KLTrveh-6rgQ2-6COo8OfGCkmAzDOWEXZ5gPhQx7SV53KowOcoQyfS9tsP3VLzjQwOYuqGmA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: e0e61f5d-2fd6-4ecd-9c2d-4ac0db1e5f4f
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:19.446 DEBUG 11516 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /cart
+2022-10-24 00:50:19.448 ERROR 11516 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : Expired JWT token
+2022-10-24 00:50:19.450  INFO 11516 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@79958053
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9DVVNUT01FUiIsImlhdCI6MTY2NjM0NjU1MSwiZXhwIjoxNjY2NDMyOTUxfQ.W490vedBiI_IO5KLTrveh-6rgQ2-6COo8OfGCkmAzDOWEXZ5gPhQx7SV53KowOcoQyfS9tsP3VLzjQwOYuqGmA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: e0e61f5d-2fd6-4ecd-9c2d-4ac0db1e5f4f
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:19.451 DEBUG 11516 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:50:19.452 DEBUG 11516 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-24 00:50:21.456  INFO 11516 --- [http-nio-8081-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9DVVNUT01FUiIsImlhdCI6MTY2NjM0NjU1MSwiZXhwIjoxNjY2NDMyOTUxfQ.W490vedBiI_IO5KLTrveh-6rgQ2-6COo8OfGCkmAzDOWEXZ5gPhQx7SV53KowOcoQyfS9tsP3VLzjQwOYuqGmA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 5e021649-11bd-4765-a615-943a0aca0007
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:21.456 DEBUG 11516 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /cart
+2022-10-24 00:50:21.458 ERROR 11516 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : Expired JWT token
+2022-10-24 00:50:21.459  INFO 11516 --- [http-nio-8081-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@2826c040
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9DVVNUT01FUiIsImlhdCI6MTY2NjM0NjU1MSwiZXhwIjoxNjY2NDMyOTUxfQ.W490vedBiI_IO5KLTrveh-6rgQ2-6COo8OfGCkmAzDOWEXZ5gPhQx7SV53KowOcoQyfS9tsP3VLzjQwOYuqGmA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 5e021649-11bd-4765-a615-943a0aca0007
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:21.459 DEBUG 11516 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:50:21.460 DEBUG 11516 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-24 00:50:30.127  INFO 11516 --- [http-nio-8081-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/auth/login':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/auth/login
+pathInfo:null
+headers: 
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 821835a6-38ad-41f2-9791-2eef759780d8
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 61
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:30.148 DEBUG 11516 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2022-10-24 00:50:30.149 DEBUG 11516 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2022-10-24 00:50:30.223  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseEntity com.example.novapo_practice05.web.rest.AuthController.login(AuthDTO))
+2022-10-24 00:50:30.241  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(AuthResponseDTO com.example.novapo_practice05.service.AuthService.grantUser(AuthDTO))
+2022-10-24 00:50:30.250  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(Optional com.example.novapo_practice05.service.UserService.getByEmail(String))
+2022-10-24 00:50:30.277  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : after called execution(Optional com.example.novapo_practice05.service.UserService.getByEmail(String))
+2022-10-24 00:50:30.566  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(UserDetails com.example.novapo_practice05.service.UserService.loadUserByUsername(String))
+2022-10-24 00:50:30.577  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : after called execution(UserDetails com.example.novapo_practice05.service.UserService.loadUserByUsername(String))
+2022-10-24 00:50:30.707  INFO 11516 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : after called execution(AuthResponseDTO com.example.novapo_practice05.service.AuthService.grantUser(AuthDTO))
+2022-10-24 00:50:53.528  INFO 11516 --- [http-nio-8081-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/cart':
+
+org.apache.catalina.connector.RequestFacade@475fde84
+
+servletPath:/cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9DVVNUT01FUiIsImlhdCI6MTY2NjU5NzgzMCwiZXhwIjoxNjY2Njg0MjMwfQ.T3edvywjC8eHJX9qmUIDZIBRGcVuNZky5CTTQghWdZt8s28Jinz9pc-PB6wvSY6Sppxg40xPE9d1Dg17rYLozA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 2d1c4d1e-10a9-4218-b7b2-28304b4bf1a0
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:53.547 DEBUG 11516 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /cart
+2022-10-24 00:50:53.569 DEBUG 11516 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /cart
+2022-10-24 00:50:53.573  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseEntity com.example.novapo_practice05.web.rest.CartItemController.addToCart(CartItemDTO))
+2022-10-24 00:50:53.577  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseCartItemDTO com.example.novapo_practice05.service.CartItemService.addToCart(CartItemDTO))
+2022-10-24 00:50:53.584  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(Item com.example.novapo_practice05.service.ItemService.getbByID(long))
+2022-10-24 00:50:53.616  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(Item com.example.novapo_practice05.service.ItemService.getbByID(long))
+2022-10-24 00:50:53.616  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(UserEntity com.example.novapo_practice05.service.UserService.getByID(Long))
+2022-10-24 00:50:53.625  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(UserEntity com.example.novapo_practice05.service.UserService.getByID(Long))
+2022-10-24 00:50:53.650  INFO 11516 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponseCartItemDTO com.example.novapo_practice05.service.CartItemService.addToCart(CartItemDTO))
+2022-10-24 00:50:53.664 ERROR 11516 --- [http-nio-8081-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: For queries with named parameters you need to use provide names for method parameters. Use @Param for query method parameters, or when on Java 8+ use the javac flag -parameters.; nested exception is java.lang.IllegalStateException: For queries with named parameters you need to use provide names for method parameters. Use @Param for query method parameters, or when on Java 8+ use the javac flag -parameters.] with root cause
+
+java.lang.IllegalStateException: For queries with named parameters you need to use provide names for method parameters. Use @Param for query method parameters, or when on Java 8+ use the javac flag -parameters.
+	at org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$BasicQueryParameterSetterFactory.lambda$getName$2(QueryParameterSetterFactory.java:259) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$BasicQueryParameterSetterFactory.getName(QueryParameterSetterFactory.java:259) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$BasicQueryParameterSetterFactory.findParameterForBinding(QueryParameterSetterFactory.java:245) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$BasicQueryParameterSetterFactory.create(QueryParameterSetterFactory.java:216) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.ParameterBinderFactory.createQueryParameterSetter(ParameterBinderFactory.java:140) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.ParameterBinderFactory.createSetters(ParameterBinderFactory.java:129) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.ParameterBinderFactory.createQueryAwareBinder(ParameterBinderFactory.java:100) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createBinder(AbstractStringBasedJpaQuery.java:109) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:99) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:198) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81) ~[spring-data-commons-2.7.3.jar:2.7.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.7.3.jar:2.7.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.23.jar:5.3.23]
+	at jdk.proxy3/jdk.proxy3.$Proxy153.findCartItemByUserAndItem(Unknown Source) ~[na:na]
+	at com.example.novapo_practice05.service.CartItemService.findExistingCartItem(CartItemService.java:124) ~[classes/:na]
+	at com.example.novapo_practice05.service.CartItemService.addToCart(CartItemService.java:103) ~[classes/:na]
+	at com.example.novapo_practice05.service.CartItemService$$FastClassBySpringCGLIB$$1c3f22fe.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.novapo_practice05.service.CartItemService$$EnhancerBySpringCGLIB$$3b7dbc93.addToCart(<generated>) ~[classes/:na]
+	at com.example.novapo_practice05.web.rest.CartItemController.addToCart(CartItemController.java:24) ~[classes/:na]
+	at com.example.novapo_practice05.web.rest.CartItemController$$FastClassBySpringCGLIB$$322c1f24.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.7.3.jar:5.7.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.novapo_practice05.web.rest.CartItemController$$EnhancerBySpringCGLIB$$90371e92.addToCart(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at com.example.novapo_practice05.filter.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2022-10-24 00:50:53.669  INFO 11516 --- [http-nio-8081-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@1370fc93
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJbXSIsInJvbGVzIjoiUk9MRV9DVVNUT01FUiIsImlhdCI6MTY2NjU5NzgzMCwiZXhwIjoxNjY2Njg0MjMwfQ.T3edvywjC8eHJX9qmUIDZIBRGcVuNZky5CTTQghWdZt8s28Jinz9pc-PB6wvSY6Sppxg40xPE9d1Dg17rYLozA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 2d1c4d1e-10a9-4218-b7b2-28304b4bf1a0
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 56
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:50:53.669 DEBUG 11516 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-24 00:50:53.670 DEBUG 11516 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /error

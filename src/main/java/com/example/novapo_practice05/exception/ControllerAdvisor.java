@@ -31,7 +31,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<Object> handleUserNotFoundException(
-        ItemNotFoundException ex, WebRequest request) {
+        UserNotFoundException ex, WebRequest request) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "User not found");
@@ -42,7 +42,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(CouldNotCreateUserException.class)
     public ResponseEntity<Object> handleCouldNotCreateUserException(
-        ItemNotFoundException ex, WebRequest request) {
+        CouldNotCreateUserException ex, WebRequest request) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "Cannot create user");
@@ -52,7 +52,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(DuplicateEmailException.class)
     public ResponseEntity<Object> handleDuplicateEmailException(
-        ItemNotFoundException ex, WebRequest request) {
+        DuplicateEmailException ex, WebRequest request) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "Email already exists");
@@ -62,7 +62,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(UserRoleNotFoundException.class)
     public ResponseEntity<Object> handleRoleNotFoundException(
-        ItemNotFoundException ex, WebRequest request) {
+        UserRoleNotFoundException ex, WebRequest request) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "Role not found");

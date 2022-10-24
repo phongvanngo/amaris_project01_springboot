@@ -8,6 +8,7 @@ import com.example.novapo_practice05.repository.ItemRepository;
 import com.example.novapo_practice05.service.dto.Item.GetItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ResponseItemDTO;
+import com.example.novapo_practice05.service.dto.Item.SearchItemDTO;
 import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 import com.example.novapo_practice05.service.mapper.ItemMapper;
 import java.time.LocalDateTime;
@@ -131,7 +132,10 @@ public class ItemService {
         } else {
             throw new ItemNotFoundException(id);
         }
+    }
 
+    public ResponsePaginationDTO<ResponseItemDTO> searchItem(SearchItemDTO searchItemDTO) {
+        return null;
     }
 
 }
