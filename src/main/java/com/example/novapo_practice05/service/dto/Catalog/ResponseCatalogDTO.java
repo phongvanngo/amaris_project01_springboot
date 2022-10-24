@@ -12,4 +12,8 @@ public class ResponseCatalogDTO {
     private String description;
     private Instant createdAt;
     private LocalDateTime deletedAt;
+
+    private String updatedBy;
+    private String createdBy;
+    private String deletedBy;
 }

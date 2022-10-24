@@ -2,6 +2,7 @@ package com.example.novapo_practice05.web.rest;
 
 import com.example.novapo_practice05.service.CatalogService;
 import com.example.novapo_practice05.service.dto.Catalog.CatalogDTO;
+import com.example.novapo_practice05.service.dto.Catalog.CatalogParamsDTO;
 import com.example.novapo_practice05.service.dto.Catalog.ResponseCatalogDTO;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,9 +25,10 @@ public class CatalogController {
     CatalogService catalogService;
 
     @GetMapping()
-    public List<ResponseCatalogDTO> getAllCatalog() {
-        return catalogService.getCatalog();
+    public List<ResponseCatalogDTO> getAllCatalog(@RequestParam CatalogParamsDTO catalogParamsDTO) {
+        return catalogService.getCatalogPagaination(catalogParamsDTO);
     }
+
 
     @PostMapping()
     @RolesAllowed({"ROLE_ADMIN","ROLE_EDITOR"})
