@@ -86,10 +86,6 @@ public class CatalogService {
         response.setLimit(catalogPage.getSize());
         response.setData(toResponseEntities(catalogs));
 
-
-//        List<Catalog> catalogs =
-//            catalogRepository.findAllByPrice(10, firstPageWithTwoElements);
-
         return response;
     }
 

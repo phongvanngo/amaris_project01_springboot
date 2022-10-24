@@ -18,12 +18,6 @@ public class UserRoleService {
         this.userRoleRepository = userRoleRepository;
     }
 
-    public void initRoles() {
-//        UserRole admin = new UserRole("ROLE_ADMIN");
-//        UserRole editor = new UserRole("ROLE_EDITOR");
-//        UserRole customer = new UserRole("ROLE_CUSTOMER");
-//        userRoleRepository.saveAll(List.of(admin, editor, customer));
-    }
 
     public Optional<UserRole> getRoleByName(String name) {
         return userRoleRepository.findByName(name);

@@ -27,8 +27,7 @@ public class CatalogController {
     CatalogService catalogService;
 
     @GetMapping()
-    public ResponsePaginationDTO<ResponseCatalogDTO> getAllCatalog(@RequestParam(value = "limit", defaultValue = "10") int limit, @RequestParam("page") int page) {
-        CatalogParamsDTO catalogParamsDTO = new CatalogParamsDTO(page, limit);
+    public ResponsePaginationDTO<ResponseCatalogDTO> getAllCatalog(@Valid CatalogParamsDTO catalogParamsDTO) {
         return catalogService.getCatalogPagaination(catalogParamsDTO);
     }
 

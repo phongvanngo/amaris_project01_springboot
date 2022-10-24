@@ -1,10 +1,12 @@
 package com.example.novapo_practice05.web.rest;
 
 import com.example.novapo_practice05.service.ItemService;
+import com.example.novapo_practice05.service.dto.Item.GetItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ResponseItemDTO;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
@@ -29,7 +32,8 @@ public class ItemController {
     }
 
     @GetMapping()
-    public List<ResponseItemDTO> getAllItems() {
+    public List<ResponseItemDTO> getAllItems(@Valid GetItemDTO getItemDTO) {
+        System.out.println(getItemDTO);
         List<ResponseItemDTO> results = itemService.getAllItems();
         System.out.println("hello");
         return results;
