@@ -40,6 +40,7 @@ public class ItemController {
 
     @GetMapping("/search")
     public ResponsePaginationDTO<ResponseItemDTO> searchItem(@Valid SearchItemDTO searchItemDTO) {
+        System.out.println(searchItemDTO);
         return itemService.searchItem(searchItemDTO);
     }
 

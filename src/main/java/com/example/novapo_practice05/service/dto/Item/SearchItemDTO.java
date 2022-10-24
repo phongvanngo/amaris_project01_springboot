@@ -3,17 +3,20 @@ package com.example.novapo_practice05.service.dto.Item;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 @Data
 public class SearchItemDTO {
-
-    @Min(0)
-    @Max(100)
-    private int limit = 10;
-
-    private int page = 100;
+    @Nullable
     private String name;
-    private int id;
+    @Nullable
     private String description;
-    private Long catalogID;
+    @Nullable
+    private Integer limit = 10;
+    @Nullable
+    private Integer page = 0;
+    @Nullable
+    private Integer id=null;
+    @Nullable
+    private Long catalogID=null;
 }

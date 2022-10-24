@@ -1,5 +1,8 @@
 package com.example.novapo_practice05.service;
 
+import com.example.novapo_practice05.common.Enum.SearchOperation;
+import com.example.novapo_practice05.common.GenericSpecification;
+import com.example.novapo_practice05.common.SearchCriteria;
 import com.example.novapo_practice05.domain.Catalog;
 import com.example.novapo_practice05.domain.Item;
 import com.example.novapo_practice05.exception.ItemNotFoundException;
@@ -18,6 +21,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -134,8 +138,50 @@ public class ItemService {
         }
     }
 
+    private <T> boolean hasValue(T value) {
+        return Optional.ofNullable(value).isPresent();
+    }
+
     public ResponsePaginationDTO<ResponseItemDTO> searchItem(SearchItemDTO searchItemDTO) {
-        return null;
+        GenericSpecification genericSpesification = new GenericSpecification<Item>();
+
+        if(hasValue(searchItemDTO.getId())) {
+            genericSpesification.add(new SearchCriteria("id", searchItemDTO.getId(), SearchOperation.EQUAL));
+        }
+
+        if (hasValue(searchItemDTO.getName())) {
+            genericSpesification.add(new SearchCriteria("name", searchItemDTO.getName(), SearchOperation.MATCH));
+        }
+
+
+
+
+        System.out.println("pre catalog id");
+        if (hasValue(searchItemDTO.getCatalogID())) {
+
+            Optional catalog = catalogRepository.findById(searchItemDTO.getCatalogID());
+
+            genericSpesification.add(new SearchCriteria("catalog", catalog.get(), SearchOperation.MATCH_END));
+        }
+        System.out.println("post catalog id");
+
+        if (hasValue(searchItemDTO.getDescription())) {
+            genericSpesification.add(new SearchCriteria("description", searchItemDTO.getDescription(), SearchOperation.MATCH));
+        }
+
+        int page = searchItemDTO.getPage();
+        int limit = searchItemDTO.getLimit();
+
+        Page<Item> itemPage = itemRepository.findAll(genericSpesification,PageRequest.of(page, limit));
+        List<Item> items = itemPage.get().collect(Collectors.toList());
+
+        ResponsePaginationDTO<ResponseItemDTO> response = new ResponsePaginationDTO<>();
+
+        return response.setPage(page)
+            .setLimt(limit)
+            .setTotalPage(itemPage.getTotalPages())
+            .setData(toResponseDTOs(items));
+
     }
 
 }
