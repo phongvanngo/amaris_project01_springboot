@@ -5,13 +5,18 @@ import com.example.novapo_practice05.domain.Item;
 import com.example.novapo_practice05.exception.ItemNotFoundException;
 import com.example.novapo_practice05.repository.CatalogRepository;
 import com.example.novapo_practice05.repository.ItemRepository;
+import com.example.novapo_practice05.service.dto.Item.GetItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ResponseItemDTO;
+import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 import com.example.novapo_practice05.service.mapper.ItemMapper;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -27,6 +32,14 @@ public class ItemService {
         this.itemRepository = itemRepository;
         this.catalogRepository = catalogRepository;
         this.itemMapper = itemMapper;
+    }
+
+    private List<ResponseItemDTO> toResponseDTOs(List<Item> items) {
+        List<ResponseItemDTO> res = new ArrayList<>();
+        for (Item item : items) {
+            res.add(itemMapper.toResponseDTO(item));
+        }
+        return res;
     }
 
 
@@ -64,8 +77,7 @@ public class ItemService {
         if (catalogID.isPresent()) {
             Optional<Catalog> catalog = catalogRepository.findById(catalogID.get());
             catalog.ifPresent(catalog1 -> itemToUpdate.setCatalog(catalog1));
-        }
-        else {
+        } else {
             itemToUpdate.setCatalog(existingItem.get().getCatalog());
         }
 
@@ -88,7 +100,7 @@ public class ItemService {
     public List<ResponseItemDTO> getAllItems() {
         List<Item> items = itemRepository.findAll();
         System.out.println(items);
-        List<ResponseItemDTO> results = new ArrayList<ResponseItemDTO>();
+        List<ResponseItemDTO> results = new ArrayList<>();
         for (Item item : items) {
             System.out.println(item);
             results.add(itemMapper.toResponseDTO(item));
@@ -97,14 +109,28 @@ public class ItemService {
         return results;
     }
 
+    public ResponsePaginationDTO<ResponseItemDTO> getItems(GetItemDTO getItemDTO) {
+        int page = getItemDTO.getPage();
+        int limit = getItemDTO.getLimit();
+
+        Page<Item> itemPage = itemRepository.findAll(PageRequest.of(page, limit));
+        List<Item> items = itemPage.get().collect(Collectors.toList());
+
+        ResponsePaginationDTO<ResponseItemDTO> response = new ResponsePaginationDTO<>();
+        return response.setPage(page)
+            .setLimt(limit)
+            .setTotalPage(itemPage.getTotalPages())
+            .setData(toResponseDTOs(items));
+    }
 
 
-    public Item getbByID(long id){
+    public Item getbByID(long id) {
         Optional<Item> item = itemRepository.findById(id);
-        if(item.isPresent()) {
+        if (item.isPresent()) {
             return item.get();
+        } else {
+            throw new ItemNotFoundException(id);
         }
-        else throw new ItemNotFoundException(id);
 
     }
 

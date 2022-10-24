@@ -4,6 +4,7 @@ import com.example.novapo_practice05.service.ItemService;
 import com.example.novapo_practice05.service.dto.Item.GetItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ItemDTO;
 import com.example.novapo_practice05.service.dto.Item.ResponseItemDTO;
+import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
@@ -32,11 +33,9 @@ public class ItemController {
     }
 
     @GetMapping()
-    public List<ResponseItemDTO> getAllItems(@Valid GetItemDTO getItemDTO) {
+    public ResponsePaginationDTO<ResponseItemDTO> getItems(@Valid GetItemDTO getItemDTO) {
         System.out.println(getItemDTO);
-        List<ResponseItemDTO> results = itemService.getAllItems();
-        System.out.println("hello");
-        return results;
+        return itemService.getItems(getItemDTO);
     }
 
     @PutMapping("/{itemID}")

@@ -720,3 +720,328 @@ Security filter chain: [
 2022-10-24 00:03:33.331  INFO 1984 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.CatalogController.getAllCatalog(CatalogParamsDTO))
 2022-10-24 00:03:33.337  INFO 1984 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.CatalogService.getCatalogPagaination(CatalogParamsDTO))
 2022-10-24 00:03:33.380  INFO 1984 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.CatalogService.getCatalogPagaination(CatalogParamsDTO))
+2022-10-24 00:29:53.547  INFO 1984 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)
+2022-10-24 00:29:53.581  INFO 1984 --- [Thread-14] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:29:53.582  INFO 1984 --- [Thread-14] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-24 00:29:53.594  INFO 1984 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:29:53.595  INFO 1984 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-10-24 00:29:53.599  INFO 1984 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-10-24 00:29:53.745  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:29:53.746  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:29:54.242  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:29:54.323  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:29:54.581  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:29:54.582  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:29:54.583  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:29:54.621  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:29:54.622  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 873 ms
+2022-10-24 00:29:54.799  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:29:54.810  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-10-24 00:29:54.882  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-10-24 00:29:54.883  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:29:55.327  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:29:55.328  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:29:55.885  WARN 1984 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartItemService' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\service\CartItemService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.service.CartItemService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3365f37e]
+2022-10-24 00:29:55.886  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:29:55.888  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-10-24 00:29:55.891  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-10-24 00:29:55.892  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-24 00:29:55.898  INFO 1984 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 00:29:55.907 ERROR 1984 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartItemService' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\service\CartItemService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.service.CartItemService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3365f37e]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.4.jar:2.7.4]
+	at com.example.novapo_practice05.NovapoPractice05Application.main(NovapoPractice05Application.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.service.CartItemService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3365f37e]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:407) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:388) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:335) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/example/novapo_practice05/service/ItemService
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3353) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2424) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738) ~[spring-core-5.3.23.jar:5.3.23]
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.novapo_practice05.service.ItemService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 28 common frames omitted
+
+2022-10-24 00:29:59.493  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1984 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-24 00:29:59.493  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:29:59.965  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:30:00.068  INFO 1984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 6 JPA repository interfaces.
+2022-10-24 00:30:00.333  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-24 00:30:00.334  INFO 1984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:30:00.335  INFO 1984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-24 00:30:00.372  INFO 1984 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:30:00.373  INFO 1984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 877 ms
+2022-10-24 00:30:00.510  INFO 1984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:30:00.517  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-10-24 00:30:00.592  INFO 1984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-10-24 00:30:00.592  INFO 1984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-24 00:30:01.011  INFO 1984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:30:01.011  INFO 1984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:30:01.757  INFO 1984 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@637b841f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10d93a3b, org.springframework.security.web.context.SecurityContextPersistenceFilter@66b98b65, org.springframework.security.web.header.HeaderWriterFilter@72b24bad, org.springframework.security.web.authentication.logout.LogoutFilter@4ab98e55, com.example.novapo_practice05.filter.JwtTokenFilter@437b94e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@627513d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27ad318, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17b849e8, org.springframework.security.web.session.SessionManagementFilter@45e4f1b3, org.springframework.security.web.access.ExceptionTranslationFilter@4ba9ec36, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@506981f2]
+2022-10-24 00:30:01.761  WARN 1984 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-24 00:30:01.817  WARN 1984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 00:30:02.202  INFO 1984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-24 00:30:02.216  INFO 1984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-24 00:30:02.222  INFO 1984 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 2.784 seconds (JVM running for 4348.477)
+2022-10-24 00:30:02.224  INFO 1984 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-24 00:30:16.380  INFO 1984 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-24 00:30:16.383  INFO 1984 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-24 00:30:16.389  INFO 1984 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-24 00:30:16.390  INFO 1984 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/catalog?page=2&limit=3':
+
+org.apache.catalina.connector.RequestFacade@6400a33e
+
+servletPath:/catalog
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: c5aa7638-82d5-4613-8857-abadd99b6ce0
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:30:16.390 DEBUG 1984 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /catalog?page=2&limit=3
+2022-10-24 00:30:16.391 DEBUG 1984 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /catalog?page=2&limit=3
+2022-10-24 00:30:16.410  INFO 1984 --- [http-nio-8081-exec-1] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.CatalogController.getAllCatalog(CatalogParamsDTO))
+2022-10-24 00:30:16.425  INFO 1984 --- [http-nio-8081-exec-1] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.CatalogService.getCatalogPagaination(CatalogParamsDTO))
+2022-10-24 00:30:16.461  INFO 1984 --- [http-nio-8081-exec-1] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.CatalogService.getCatalogPagaination(CatalogParamsDTO))
+2022-10-24 00:30:28.368  INFO 1984 --- [http-nio-8081-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/catalog?page=100&limit=3':
+
+org.apache.catalina.connector.RequestFacade@6400a33e
+
+servletPath:/catalog
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 688b6a6b-8db6-4a5e-a08b-4b4c9ea81dad
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:30:28.369 DEBUG 1984 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /catalog?page=100&limit=3
+2022-10-24 00:30:28.369 DEBUG 1984 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /catalog?page=100&limit=3
+2022-10-24 00:30:28.371  INFO 1984 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.CatalogController.getAllCatalog(CatalogParamsDTO))
+2022-10-24 00:30:28.371  INFO 1984 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.CatalogService.getCatalogPagaination(CatalogParamsDTO))
+2022-10-24 00:30:28.392  INFO 1984 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.CatalogService.getCatalogPagaination(CatalogParamsDTO))
+2022-10-24 00:30:49.609  INFO 1984 --- [http-nio-8081-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item?limit=5&page=1':
+
+org.apache.catalina.connector.RequestFacade@6400a33e
+
+servletPath:/item
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: b8499d49-a22f-4637-ade0-b5deead8b99d
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:30:49.610 DEBUG 1984 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /item?limit=5&page=1
+2022-10-24 00:30:49.610 DEBUG 1984 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /item?limit=5&page=1
+2022-10-24 00:30:49.620  INFO 1984 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
+2022-10-24 00:30:49.625  INFO 1984 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:30:52.902  INFO 1984 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:31:06.074  INFO 1984 --- [http-nio-8081-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item?limit=100&page=1':
+
+org.apache.catalina.connector.RequestFacade@6400a33e
+
+servletPath:/item
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: a306dcec-d5e8-4d66-b0e8-dbeb29b3b02c
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:31:06.075 DEBUG 1984 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /item?limit=100&page=1
+2022-10-24 00:31:06.075 DEBUG 1984 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /item?limit=100&page=1
+2022-10-24 00:31:06.079  INFO 1984 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
+2022-10-24 00:31:06.080  INFO 1984 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:31:09.916  INFO 1984 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:31:22.023  INFO 1984 --- [http-nio-8081-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item?limit=100&page=0':
+
+org.apache.catalina.connector.RequestFacade@6400a33e
+
+servletPath:/item
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: db4e62a7-23b3-4789-9580-df8ad993450d
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-24 00:31:22.023 DEBUG 1984 --- [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /item?limit=100&page=0
+2022-10-24 00:31:22.024 DEBUG 1984 --- [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /item?limit=100&page=0
+2022-10-24 00:31:22.027  INFO 1984 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
+2022-10-24 00:31:22.027  INFO 1984 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-24 00:31:25.483  INFO 1984 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
