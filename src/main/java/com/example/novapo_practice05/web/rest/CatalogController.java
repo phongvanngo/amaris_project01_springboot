@@ -4,8 +4,10 @@ import com.example.novapo_practice05.service.CatalogService;
 import com.example.novapo_practice05.service.dto.Catalog.CatalogDTO;
 import com.example.novapo_practice05.service.dto.Catalog.CatalogParamsDTO;
 import com.example.novapo_practice05.service.dto.Catalog.ResponseCatalogDTO;
+import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +27,8 @@ public class CatalogController {
     CatalogService catalogService;
 
     @GetMapping()
-    public List<ResponseCatalogDTO> getAllCatalog(@RequestParam CatalogParamsDTO catalogParamsDTO) {
+    public ResponsePaginationDTO<ResponseCatalogDTO> getAllCatalog(@RequestParam(value = "limit", defaultValue = "10") int limit, @RequestParam("page") int page) {
+        CatalogParamsDTO catalogParamsDTO = new CatalogParamsDTO(page, limit);
         return catalogService.getCatalogPagaination(catalogParamsDTO);
     }
 

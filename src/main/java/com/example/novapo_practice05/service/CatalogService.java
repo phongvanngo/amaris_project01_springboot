@@ -72,7 +72,7 @@ public class CatalogService {
         return results;
     }
 
-    public List<ResponseCatalogDTO> getCatalogPagaination(CatalogParamsDTO catalogParamsDTO) {
+    public ResponsePaginationDTO<ResponseCatalogDTO> getCatalogPagaination(CatalogParamsDTO catalogParamsDTO) {
         int page = catalogParamsDTO.getPage();
         int limit = catalogParamsDTO.getLimit();
 
@@ -80,16 +80,17 @@ public class CatalogService {
         Page<Catalog> catalogPage  = catalogRepository.findAll(firstPageWithTwoElements);
         List<Catalog> catalogs =  catalogPage.get().collect(Collectors.toList());
 
-        ResponsePaginationDTO<List<Catalog>> response  = new ResponsePaginationDTO<>();
+        ResponsePaginationDTO<ResponseCatalogDTO> response  = new ResponsePaginationDTO<>();
         response.setPage(catalogParamsDTO.getPage());
         response.setTotalPage(catalogPage.getTotalPages());
         response.setLimit(catalogPage.getSize());
-//        response.setData(catalogs);
+        response.setData(toResponseEntities(catalogs));
+
 
 //        List<Catalog> catalogs =
 //            catalogRepository.findAllByPrice(10, firstPageWithTwoElements);
 
-        return toResponseEntities(catalogs);
+        return response;
     }
 
 }
