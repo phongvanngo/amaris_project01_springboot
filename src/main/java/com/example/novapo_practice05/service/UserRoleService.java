@@ -1,12 +1,11 @@
 package com.example.novapo_practice05.service;
 
-import com.example.novapo_practice05.domain.UserRole;
-import com.example.novapo_practice05.repository.UserRepository;
-import com.example.novapo_practice05.repository.UserRoleRepository;
-import java.util.List;
 import java.util.Optional;
-import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Service;
+
+import com.example.novapo_practice05.domain.UserRole;
+import com.example.novapo_practice05.repository.UserRoleRepository;
 
 @Service
 public class UserRoleService {
