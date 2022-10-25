@@ -144,7 +144,7 @@ public class ItemService {
     }
 
     public ResponsePaginationDTO<ResponseItemDTO> searchItem(SearchItemDTO searchItemDTO) {
-        GenericSpecification genericSpesification = new GenericSpecification<Item>();
+        GenericSpecification<Item> genericSpesification = new GenericSpecification<Item>();
 
         if(hasValue(searchItemDTO.getId())) {
             genericSpesification.add(new SearchCriteria("id", searchItemDTO.getId(), SearchOperation.EQUAL));

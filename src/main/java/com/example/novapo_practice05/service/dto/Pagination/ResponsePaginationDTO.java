@@ -8,21 +8,21 @@ import lombok.Getter;
 public class ResponsePaginationDTO<T> {
 
     private List<T> data;
-    private int page;
-    private int limit;
-    private int totalPage;
+    private Integer page;
+    private Integer limit;
+    private Integer totalPage;
 
-    public ResponsePaginationDTO<T> setPage(int page) {
+    public ResponsePaginationDTO<T> setPage(Integer page) {
         this.page = page;
         return this;
     }
 
-    public ResponsePaginationDTO<T> setTotalPage(int page) {
+    public ResponsePaginationDTO<T> setTotalPage(Integer page) {
         this.totalPage = page;
         return this;
     }
 
-    public ResponsePaginationDTO<T> setLimt(int limit) {
+    public ResponsePaginationDTO<T> setLimt(Integer limit) {
         this.limit = limit;
         return this;
     }
