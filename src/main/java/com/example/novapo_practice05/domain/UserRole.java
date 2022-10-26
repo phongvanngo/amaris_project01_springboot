@@ -19,7 +19,6 @@ public class UserRole {
     @GenericGenerator(name = "native",strategy = "native")
     private Long id;
 
-    @JoinColumn(name = "name",unique = true)
     private String name;
 
 }

@@ -29,8 +29,6 @@ public class Item extends AbstractAuditingEntity{
     @NotNull
     private String description;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name="catalog_id",referencedColumnName = "catalogID", nullable = false)
     private Catalog catalog;
     
 }

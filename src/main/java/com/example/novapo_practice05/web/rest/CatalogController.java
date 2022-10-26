@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/catalog")
+@RequestMapping("/api/catalog")
 public class CatalogController {
 
     @Autowired
@@ -34,6 +34,7 @@ public class CatalogController {
 
     @PostMapping()
     @RolesAllowed({"ROLE_ADMIN","ROLE_EDITOR"})
+    @
     public ResponseCatalogDTO createCatalog(@RequestBody CatalogDTO catalogDTO) {
         return catalogService.createCatalog(catalogDTO);
     }

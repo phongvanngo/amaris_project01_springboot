@@ -20,10 +20,8 @@ public class CartItem extends AbstractAuditingEntity{
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = UserEntity.class)
     private UserEntity user;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = Item.class)
     private Item item;
 
     @Column(name = "quantity")

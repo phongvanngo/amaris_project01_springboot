@@ -51,20 +51,8 @@ public class UserEntity extends AbstractAuditingEntity {
     @Column(name = "account_number")
     private String accountNumber;
 
-    @ManyToMany
-    @JoinTable(
-        name = "users_authorities",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
     private Set<Authority> authorities;
 
-    @ManyToMany
-    @JoinTable(
-        name = "users_roles",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
     private Set<UserRole> roles;
 
 
