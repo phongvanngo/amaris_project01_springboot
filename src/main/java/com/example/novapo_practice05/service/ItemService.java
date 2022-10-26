@@ -1,20 +1,11 @@
 package com.example.novapo_practice05.service;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Service;
-
+import com.example.novapo_practice05.common.Enum.SearchOperation;
 import com.example.novapo_practice05.common.GenericSpecification;
 import com.example.novapo_practice05.common.SearchCriteria;
-import com.example.novapo_practice05.common.Enum.SearchOperation;
 import com.example.novapo_practice05.domain.Catalog;
 import com.example.novapo_practice05.domain.Item;
+import com.example.novapo_practice05.exception.CatalogNotFoundException;
 import com.example.novapo_practice05.exception.ItemNotFoundException;
 import com.example.novapo_practice05.repository.CatalogRepository;
 import com.example.novapo_practice05.repository.ItemRepository;
@@ -24,6 +15,14 @@ import com.example.novapo_practice05.service.dto.Item.ResponseItemDTO;
 import com.example.novapo_practice05.service.dto.Item.SearchItemDTO;
 import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 import com.example.novapo_practice05.service.mapper.ItemMapper;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
 @Service
 public class ItemService {
@@ -49,19 +48,16 @@ public class ItemService {
     }
 
 
-    public ResponseItemDTO createItem(ItemDTO item) {
+    public ResponseItemDTO createItem(ItemDTO item) throws CatalogNotFoundException {
 
         Long catalogID = item.getCatalogID();
+        Optional<Catalog> catalogOptional = catalogRepository.findById(catalogID);
+        Catalog catalog = catalogOptional.orElseThrow(() -> new CatalogNotFoundException(item.getCatalogID()));
+        Item itemToCreate = itemMapper.toEntity(item);
+        itemToCreate.setCatalogID(catalog.getId());
+        Item newItem = itemRepository.save(itemToCreate);
+        return itemMapper.toResponseDTO(newItem);
 
-        Optional<Catalog> catalog = catalogRepository.findById(catalogID);
-
-        if (catalog.isPresent()) {
-            Item itemToCreate = itemMapper.toEntity(item);
-            itemToCreate.setCatalogID(catalog.get().getId());
-            Item newItem = itemRepository.save(itemToCreate);
-            return itemMapper.toResponseDTO(newItem);
-        }
-        return null;
     }
 
     public ResponseItemDTO updateItem(ItemDTO item, Long itemID) {
@@ -123,9 +119,7 @@ public class ItemService {
         List<Item> items = itemPage.get().collect(Collectors.toList());
 
         ResponsePaginationDTO<ResponseItemDTO> response = new ResponsePaginationDTO<>();
-        return response.setPage(page)
-            .setLimt(limit)
-            .setTotalPage(itemPage.getTotalPages())
+        return response.setPage(page).setLimt(limit).setTotalPage(itemPage.getTotalPages())
             .setData(toResponseDTOs(items));
     }
 
@@ -146,16 +140,13 @@ public class ItemService {
     public ResponsePaginationDTO<ResponseItemDTO> searchItem(SearchItemDTO searchItemDTO) {
         GenericSpecification<Item> genericSpesification = new GenericSpecification<Item>();
 
-        if(hasValue(searchItemDTO.getId())) {
+        if (hasValue(searchItemDTO.getId())) {
             genericSpesification.add(new SearchCriteria("id", searchItemDTO.getId(), SearchOperation.EQUAL));
         }
 
         if (hasValue(searchItemDTO.getName())) {
             genericSpesification.add(new SearchCriteria("name", searchItemDTO.getName(), SearchOperation.MATCH));
         }
-
-
-
 
         System.out.println("pre catalog id");
         if (hasValue(searchItemDTO.getCatalogID())) {
@@ -167,20 +158,19 @@ public class ItemService {
         System.out.println("post catalog id");
 
         if (hasValue(searchItemDTO.getDescription())) {
-            genericSpesification.add(new SearchCriteria("description", searchItemDTO.getDescription(), SearchOperation.MATCH));
+            genericSpesification.add(
+                new SearchCriteria("description", searchItemDTO.getDescription(), SearchOperation.MATCH));
         }
 
         int page = searchItemDTO.getPage();
         int limit = searchItemDTO.getLimit();
 
-        Page<Item> itemPage = itemRepository.findAll(genericSpesification,PageRequest.of(page, limit));
+        Page<Item> itemPage = itemRepository.findAll(genericSpesification, PageRequest.of(page, limit));
         List<Item> items = itemPage.get().collect(Collectors.toList());
 
         ResponsePaginationDTO<ResponseItemDTO> response = new ResponsePaginationDTO<>();
 
-        return response.setPage(page)
-            .setLimt(limit)
-            .setTotalPage(itemPage.getTotalPages())
+        return response.setPage(page).setLimt(limit).setTotalPage(itemPage.getTotalPages())
             .setData(toResponseDTOs(items));
 
     }

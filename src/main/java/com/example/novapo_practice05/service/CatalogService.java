@@ -1,5 +1,6 @@
 package com.example.novapo_practice05.service;
 
+import com.example.novapo_practice05.common.MyUtil;
 import com.example.novapo_practice05.domain.Catalog;
 import com.example.novapo_practice05.repository.CatalogRepository;
 import com.example.novapo_practice05.service.dto.Catalog.CatalogDTO;
@@ -38,6 +39,8 @@ public class CatalogService {
     }
 
     public ResponseCatalogDTO createCatalog(CatalogDTO catalog) {
+        Catalog catalogToCreate = catalogMapper.toEntity(catalog);
+//        catalogToCreate.setId(MyUtil.randomLong(1L,10L));
         Catalog newCatalog = catalogRepository.save(catalogMapper.toEntity(catalog));
         return catalogMapper.toResponseDTO(newCatalog);
     }

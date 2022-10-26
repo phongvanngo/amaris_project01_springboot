@@ -29,6 +29,16 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(CatalogNotFoundException.class)
+    public ResponseEntity<Object> handleCatalogNotFoundException(
+        CatalogNotFoundException ex, WebRequest request) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "Catalog not found");
+        body.put("status", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<Object> handleUserNotFoundException(
         UserNotFoundException ex, WebRequest request) {
@@ -49,6 +59,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         body.put("status", HttpStatus.INTERNAL_SERVER_ERROR);
         return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
 
     @ExceptionHandler(DuplicateEmailException.class)
     public ResponseEntity<Object> handleDuplicateEmailException(
