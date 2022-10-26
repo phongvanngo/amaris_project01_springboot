@@ -1,9 +1,8 @@
 package com.example.novapo_practice05.service.dto.Item;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import lombok.Data;
 import org.springframework.lang.Nullable;
+
+import lombok.Data;
 
 @Data
 public class SearchItemDTO {

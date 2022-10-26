@@ -1,9 +1,10 @@
 package com.example.novapo_practice05.service.dto.User;
 
-import com.example.novapo_practice05.domain.UserRole;
 import java.util.Set;
+
+import com.example.novapo_practice05.domain.UserRole;
+
 import lombok.Data;
-import org.springframework.security.core.userdetails.User;
 
 @Data
 public class UserCustomerDTO {

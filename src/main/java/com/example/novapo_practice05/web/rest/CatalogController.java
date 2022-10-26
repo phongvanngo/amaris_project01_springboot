@@ -1,13 +1,8 @@
 package com.example.novapo_practice05.web.rest;
 
-import com.example.novapo_practice05.service.CatalogService;
-import com.example.novapo_practice05.service.dto.Catalog.CatalogDTO;
-import com.example.novapo_practice05.service.dto.Catalog.CatalogParamsDTO;
-import com.example.novapo_practice05.service.dto.Catalog.ResponseCatalogDTO;
-import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
-import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.novapo_practice05.service.CatalogService;
+import com.example.novapo_practice05.service.dto.Catalog.CatalogDTO;
+import com.example.novapo_practice05.service.dto.Catalog.CatalogParamsDTO;
+import com.example.novapo_practice05.service.dto.Catalog.ResponseCatalogDTO;
+import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 
 @RestController
 @RequestMapping("/api/catalog")
