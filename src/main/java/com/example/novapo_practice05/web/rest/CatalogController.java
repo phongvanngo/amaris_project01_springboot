@@ -34,7 +34,6 @@ public class CatalogController {
 
     @PostMapping()
     @RolesAllowed({"ROLE_ADMIN","ROLE_EDITOR"})
-    @
     public ResponseCatalogDTO createCatalog(@RequestBody CatalogDTO catalogDTO) {
         return catalogService.createCatalog(catalogDTO);
     }
