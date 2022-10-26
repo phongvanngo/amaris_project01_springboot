@@ -1,5 +1,6 @@
 package com.example.novapo_practice05.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,11 +21,14 @@ public class Item extends AbstractAuditingEntity{
     private long id;
 
     @NotNull
+    @Column(name="name")
     private String name;
 
     @NotNull
+    @Column(name="description")
     private String description;
 
-    private Catalog catalog;
-    
+    @Column(name="catalog_id")
+    private Long catalogID;
+
 }

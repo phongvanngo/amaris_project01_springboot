@@ -10,7 +10,6 @@ public class ResponseCartItemDTO {
     private Long id;
     private Instant createdAt;
     private LocalDateTime deletedAt;
-    private Item item;
     private Long itemID;
     private Long userID;
     private int quantity;

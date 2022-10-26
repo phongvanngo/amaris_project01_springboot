@@ -20,7 +20,7 @@ import com.example.novapo_practice05.service.dto.Catalog.ResponseCatalogDTO;
 import com.example.novapo_practice05.service.dto.Pagination.ResponsePaginationDTO;
 
 @RestController
-@RequestMapping("/api/catalog")
+@RequestMapping("/catalog")
 public class CatalogController {
 
     @Autowired

@@ -1,6 +1,6 @@
 package com.example.novapo_practice05.service.dto.User;
 
-import com.example.novapo_practice05.domain.UserRole;
+import com.example.novapo_practice05.domain.Role;
 import java.time.Instant;
 import java.util.Set;
 import lombok.Data;
@@ -14,7 +14,7 @@ public class UserResponseDTO {
     private String phoneNumber;
     private String email;
     private String accountNumber;
-    private Set<UserRole> roles;
+    private Set<Role> roles;
     private Instant createdAt;
 
 }

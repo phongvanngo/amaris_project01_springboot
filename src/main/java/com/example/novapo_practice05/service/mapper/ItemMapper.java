@@ -11,6 +11,5 @@ public interface ItemMapper {
 
     Item toEntity(ItemDTO itemDTO);
 
-    @Mapping(source = "catalog.id",target ="catalogID" )
     ResponseItemDTO toResponseDTO(Item item);
 }

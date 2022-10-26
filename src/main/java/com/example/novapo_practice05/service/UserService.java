@@ -1,27 +1,19 @@
 package com.example.novapo_practice05.service;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.novapo_practice05.domain.UserEntity;
-import com.example.novapo_practice05.domain.UserRole;
+import com.example.novapo_practice05.domain.Role;
 import com.example.novapo_practice05.exception.CouldNotCreateUserException;
 import com.example.novapo_practice05.exception.DuplicateEmailException;
 import com.example.novapo_practice05.exception.UserNotFoundException;
-import com.example.novapo_practice05.exception.UserRoleNotFoundException;
+import com.example.novapo_practice05.exception.RoleNotFoundException;
 import com.example.novapo_practice05.repository.UserRepository;
 import com.example.novapo_practice05.service.dto.User.SetRoleDTO;
 import com.example.novapo_practice05.service.dto.User.SignUpDTO;
@@ -29,7 +21,7 @@ import com.example.novapo_practice05.service.dto.User.UserResponseDTO;
 import com.example.novapo_practice05.service.mapper.UserMapper;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService  {
 
     @Autowired
     private UserRepository userRepository;
@@ -37,7 +29,7 @@ public class UserService implements UserDetailsService {
     private UserMapper userMapper;
 
     @Autowired
-    private UserRoleService userRoleService;
+    private RoleService roleService;
 
 
     @Autowired
@@ -65,22 +57,21 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        String userName, password = null;
-        List<GrantedAuthority> authorities = null;
-        Optional<UserEntity> user = userRepository.findByEmail(username);
-        if (user.isEmpty()) {
-            throw new UsernameNotFoundException("User details not found for the user : " + username);
-        } else {
-            userName = user.get().getEmail();
-            password = user.get().getPassword();
-            authorities = new ArrayList<>();
-//            authorities.add(new SimpleGrantedAuthority(user.get().getRole().toString()));
-            authorities.add(new SimpleGrantedAuthority("ROLE_ADMINISTRATOR"));
-        }
-        return new User(username, password, authorities);
-    }
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        String userName, password = null;
+//        List<GrantedAuthority> authorities = null;
+//        Optional<UserEntity> user = userRepository.findByEmail(username);
+//        if (user.isEmpty()) {
+//            throw new UsernameNotFoundException("User details not found for the user : " + username);
+//        } else {
+//            userName = user.get().getEmail();
+//            password = user.get().getPassword();
+//            authorities = new ArrayList<>();
+////            authorities.add(new SimpleGrantedAuthority(user.get().getRole().toString()));
+//            authorities.add(new SimpleGrantedAuthority("ROLE_ADMINISTRATOR"));
+//        }
+//        return new User(username, password, authorities);
+//    }
 
 
 
@@ -136,18 +127,18 @@ public class UserService implements UserDetailsService {
     }
 
     public UserResponseDTO setRole(SetRoleDTO setRoleDTO) {
-        Optional<UserRole> userRole = userRoleService.getRoleByName(setRoleDTO.getRoleName());
-        if (userRole.isEmpty()) {
-            throw new UserRoleNotFoundException(setRoleDTO.getRoleName());
+        Optional<Role> role = roleService.getRoleByName(setRoleDTO.getRoleName());
+        if (role.isEmpty()) {
+            throw new RoleNotFoundException(setRoleDTO.getRoleName());
         }
         Optional<UserEntity> user = userRepository.findById(setRoleDTO.getUserID());
         if (user.isEmpty()) {
             throw new UserNotFoundException(setRoleDTO.getUserID());
         }
 
-        Set<UserRole> userRoles = new HashSet<>(user.get().getRoles());
-        userRoles.add(userRole.get());
-        user.get().setRoles(userRoles);
+//        Set<UserRole> roles = new HashSet<>(user.get().getRoles());
+//        userRoles.add(userRole.get());
+//        user.get().setRoles(userRoles);
 
         return userMapper.toResponseDto(userRepository.save(user.get()));
     }
@@ -155,5 +146,6 @@ public class UserService implements UserDetailsService {
     public Optional<UserEntity> getByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
 
 }

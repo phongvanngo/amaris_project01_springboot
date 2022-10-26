@@ -57,7 +57,7 @@ public class ItemService {
 
         if (catalog.isPresent()) {
             Item itemToCreate = itemMapper.toEntity(item);
-            itemToCreate.setCatalog(catalog.get());
+            itemToCreate.setCatalogID(catalog.get().getId());
             Item newItem = itemRepository.save(itemToCreate);
             return itemMapper.toResponseDTO(newItem);
         }
@@ -82,9 +82,9 @@ public class ItemService {
 //        if update catalogID
         if (catalogID.isPresent()) {
             Optional<Catalog> catalog = catalogRepository.findById(catalogID.get());
-            catalog.ifPresent(catalog1 -> itemToUpdate.setCatalog(catalog1));
+            catalog.ifPresent(catalog1 -> itemToUpdate.setCatalogID(catalog1.getId()));
         } else {
-            itemToUpdate.setCatalog(existingItem.get().getCatalog());
+            itemToUpdate.setCatalogID(existingItem.get().getCatalogID());
         }
 
         Item newItem = itemRepository.save(itemToUpdate);

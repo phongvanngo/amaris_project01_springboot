@@ -28,12 +28,12 @@ public class ItemController {
     ItemService itemService;
 
     @PostMapping()
-    @RolesAllowed("ROLE_ADMIN")
     public ResponseItemDTO createItem(@RequestBody ItemDTO itemDTO) {
         return itemService.createItem(itemDTO);
     }
 
     @GetMapping()
+    @RolesAllowed("ROLE_ADMIN")
     public ResponsePaginationDTO<ResponseItemDTO> getItems(@Valid GetItemDTO getItemDTO) {
         return itemService.getItems(getItemDTO);
     }

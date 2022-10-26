@@ -21,9 +21,11 @@ public class CartItem extends AbstractAuditingEntity{
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    private UserEntity user;
+    @Column(name="item_id")
+    private Long itemID;
 
-    private Item item;
+    @Column(name="user_id")
+    private Long userID;
 
     @Column(name = "quantity")
     private int quantity = 0;

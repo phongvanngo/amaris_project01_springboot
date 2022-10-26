@@ -69,8 +69,8 @@ public class CartItemService {
 
                 Optional<Item> item = itemRepository.findById(itemID);
                 Optional<UserEntity> user = userRepository.findById(userID);
-                newCartItem.setItem(item.get());
-                newCartItem.setUser(user.get());
+                newCartItem.setItemID(item.get().getId());
+                newCartItem.setUserID(user.get().getId());
                 newCartItem.setQuantity(requestQuantity);
             }
             newCartItem = cartItemRepository.save(newCartItem);
@@ -112,8 +112,8 @@ public class CartItemService {
             newCartItem = existingCartItem.get();
         } else {
             newCartItem = new CartItem();
-            newCartItem.setItem(item);
-            newCartItem.setUser(user);
+            newCartItem.setItemID(item.getId());
+            newCartItem.setUserID(user.getId());
             newCartItem.setQuantity(requestQuantity);
         }
         newCartItem = cartItemRepository.save(newCartItem);

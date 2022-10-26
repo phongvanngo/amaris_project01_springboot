@@ -10,7 +10,5 @@ import org.mapstruct.Mapping;
 public interface CartItemMapper {
     CartItem toEntity(CartItemDTO cartItemDTO);
 
-    @Mapping(source="item.id",target = "itemID")
-    @Mapping(source="user.id",target = "userID")
     ResponseCartItemDTO toResponseDTO(CartItem cartItem);
 }

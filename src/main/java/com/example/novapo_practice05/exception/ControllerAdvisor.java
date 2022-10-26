@@ -60,9 +60,9 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(UserRoleNotFoundException.class)
+    @ExceptionHandler(RoleNotFoundException.class)
     public ResponseEntity<Object> handleRoleNotFoundException(
-        UserRoleNotFoundException ex, WebRequest request) {
+        RoleNotFoundException ex, WebRequest request) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "Role not found");

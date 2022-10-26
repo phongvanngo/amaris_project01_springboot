@@ -8,7 +8,6 @@ import lombok.Data;
 @Data
 public class ResponseItemDTO {
     private Long id;
-    private Catalog catalog;
     private Long catalogID;
     private String name;
     private String description;

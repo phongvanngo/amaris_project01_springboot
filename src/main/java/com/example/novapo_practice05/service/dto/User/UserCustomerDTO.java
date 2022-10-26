@@ -2,7 +2,7 @@ package com.example.novapo_practice05.service.dto.User;
 
 import java.util.Set;
 
-import com.example.novapo_practice05.domain.UserRole;
+import com.example.novapo_practice05.domain.Role;
 
 import lombok.Data;
 
@@ -15,5 +15,5 @@ public class UserCustomerDTO {
     private String phoneNumber;
     private String password;
     private String accountNumber;
-    private Set<UserRole> roles;
+    private Set<Role> roles;
 }

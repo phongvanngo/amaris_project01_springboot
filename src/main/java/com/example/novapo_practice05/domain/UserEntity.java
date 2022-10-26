@@ -47,9 +47,9 @@ public class UserEntity extends AbstractAuditingEntity {
     @Column(name = "account_number")
     private String accountNumber;
 
-    private Set<Authority> authorities;
-
-    private Set<UserRole> roles;
+//    private Set<Authority> authorities;
+//
+//    private Set<UserRole> roles;
 
 
 //    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)

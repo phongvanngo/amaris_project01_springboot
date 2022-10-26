@@ -2,6 +2,9 @@ package com.example.novapo_practice05.service;
 
 import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.UserEntity;
+import com.example.novapo_practice05.repository.RoleRepository;
+import com.example.novapo_practice05.repository.UserRepository;
+import com.example.novapo_practice05.repository.UsersRolesRepository;
 import com.example.novapo_practice05.security.JwtUtils;
 import com.example.novapo_practice05.service.dto.User.AuthDTO;
 import com.example.novapo_practice05.service.dto.User.AuthResponseDTO;
@@ -22,12 +25,40 @@ public class AuthService {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private AuthenticationManager authManager;
+
+    @Autowired
+    private UsersRolesRepository usersRolesRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private RoleRepository roleRepository;
+
     @Autowired
     private JwtUtils jwtUtils;
     @Autowired
     private UserService userService;
 
     public AuthResponseDTO grantUser(AuthDTO authDTO) {
+
+        // spring security auto authenticate
+        Authentication authentication = authManager.authenticate(
+            new UsernamePasswordAuthenticationToken(
+                authDTO.getEmail(),
+                authDTO.getPassword()
+            )
+        );
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        CustomUserDetails customUserDetails = (CustomUserDetails) authentication.getPrincipal();
+        String jwt = jwtUtils.generateAccessToken(customUserDetails);
+        return new AuthResponseDTO(authDTO.getEmail(), customUserDetails.getRoles(),customUserDetails.getAuthorities(), jwt);
+
+    }
+
+    public AuthResponseDTO grantUser2(AuthDTO authDTO) {
 
         Optional<UserEntity> user = userService.getByEmail(authDTO.getEmail());
 
@@ -49,11 +80,11 @@ public class AuthService {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        CustomUserDetails customUserDetails = new CustomUserDetails(user.get());
+        CustomUserDetails customUserDetails = null;
 
         String jwt = jwtUtils.generateAccessToken(customUserDetails);
 
-        return new AuthResponseDTO(user.get().getEmail(), user.get().getRoles(), jwt);
+        return null;
     }
 
 
