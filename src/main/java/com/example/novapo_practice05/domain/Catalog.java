@@ -14,7 +14,7 @@ import lombok.Data;
 @Table(name="catalog")
 public class Catalog extends AbstractAuditingEntity{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private long id;
 
     @NotNull
