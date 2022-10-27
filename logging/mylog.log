@@ -9720,3 +9720,500 @@ Security filter chain: [
 2022-10-26 02:39:51.087  INFO 5164 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseItemDTO com.example.novapo_practice05.web.rest.ItemController.createItem(ItemDTO))
 2022-10-26 02:39:51.094  INFO 5164 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseItemDTO com.example.novapo_practice05.service.ItemService.createItem(ItemDTO))
 2022-10-26 02:39:51.189  INFO 5164 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponseItemDTO com.example.novapo_practice05.service.ItemService.createItem(ItemDTO))
+2022-10-26 02:41:00.212  INFO 5164 --- [http-nio-8081-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item?limit=2&page=0':
+
+org.apache.catalina.connector.RequestFacade@5ba010ef
+
+servletPath:/item
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9FRElUT1IiLCJpYXQiOjE2NjY3Njg5MzQsImV4cCI6MTY2Njg1NTMzNH0.QG1o4Qg7STbtn_s3jyQLjty9_Y5iLzWwqwoO86fpP1sHGsVqdgIliqOCcLfw42PA2uWefcquySOqUwvuiYXLRA
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 8ddf5484-63a0-4f67-ae4c-95e5e6641197
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-26 02:41:00.213 DEBUG 5164 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /item?limit=2&page=0
+2022-10-26 02:41:00.217 DEBUG 5164 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /item?limit=2&page=0
+2022-10-26 02:41:00.230  INFO 5164 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
+2022-10-26 02:41:00.231  INFO 5164 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-26 02:41:00.372  INFO 5164 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-26 02:41:06.376  INFO 5164 --- [http-nio-8081-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item?limit=100&page=0':
+
+org.apache.catalina.connector.RequestFacade@5ba010ef
+
+servletPath:/item
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9FRElUT1IiLCJpYXQiOjE2NjY3Njg5MzQsImV4cCI6MTY2Njg1NTMzNH0.QG1o4Qg7STbtn_s3jyQLjty9_Y5iLzWwqwoO86fpP1sHGsVqdgIliqOCcLfw42PA2uWefcquySOqUwvuiYXLRA
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: f39f0eab-6983-47d2-8f0c-a59324c7d45b
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-26 02:41:06.377 DEBUG 5164 --- [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /item?limit=100&page=0
+2022-10-26 02:41:06.388 DEBUG 5164 --- [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /item?limit=100&page=0
+2022-10-26 02:41:06.391  INFO 5164 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.getItems(GetItemDTO))
+2022-10-26 02:41:06.393  INFO 5164 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-26 02:41:06.491  INFO 5164 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.getItems(GetItemDTO))
+2022-10-26 06:30:44.625  WARN 5164 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=3h25s973ms60µs900ns).
+2022-10-26 18:39:05.913  WARN 5164 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=12h8m29s333ms646µs700ns).
+2022-10-26 19:15:44.288  INFO 5164 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 75 class path changes (0 additions, 74 deletions, 1 modification)
+2022-10-26 19:15:44.327  INFO 5164 --- [Thread-29] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-26 19:15:44.329  INFO 5164 --- [Thread-29] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-26 19:15:44.339  INFO 5164 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:15:44.344  INFO 5164 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-10-26 19:15:44.347  INFO 5164 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-10-26 19:15:44.564  INFO 5164 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 5164 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 19:15:44.564  INFO 5164 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 19:15:44.583  WARN 5164 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.novapo_practice05.NovapoPractice05Application]; nested exception is java.io.FileNotFoundException: class path resource [com/example/novapo_practice05/service/mapper/CartItemMapper.class] cannot be opened because it does not exist
+2022-10-26 19:15:44.594 ERROR 5164 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.novapo_practice05.NovapoPractice05Application]; nested exception is java.io.FileNotFoundException: class path resource [com/example/novapo_practice05/service/mapper/CartItemMapper.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.4.jar:2.7.4]
+	at com.example.novapo_practice05.NovapoPractice05Application.main(NovapoPractice05Application.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+Caused by: java.io.FileNotFoundException: class path resource [com/example/novapo_practice05/service/mapper/CartItemMapper.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.23.jar:5.3.23]
+	... 16 common frames omitted
+
+2022-10-26 19:16:19.382  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 3696 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 19:16:19.384  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 19:16:19.503  INFO 3696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-26 19:16:19.504  INFO 3696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-26 19:16:21.283  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 19:16:21.496  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199 ms. Found 7 JPA repository interfaces.
+2022-10-26 19:16:23.429  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-26 19:16:23.451  INFO 3696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-26 19:16:23.452  INFO 3696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-26 19:16:23.644  INFO 3696 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-26 19:16:23.645  INFO 3696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4140 ms
+2022-10-26 19:16:24.098  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-26 19:16:24.372  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-26 19:16:24.481  INFO 3696 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 19:16:24.628  INFO 3696 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-26 19:16:25.025  INFO 3696 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-26 19:16:25.251  INFO 3696 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-26 19:16:25.498  WARN 3696 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-26 19:16:25.982  WARN 3696 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 19:16:25.983  WARN 3696 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 19:16:26.720  INFO 3696 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 19:16:26.731  INFO 3696 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:16:28.902  INFO 3696 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@789c4bd7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c32fd6d, org.springframework.security.web.context.SecurityContextPersistenceFilter@689a7b7f, org.springframework.security.web.header.HeaderWriterFilter@372818ef, org.springframework.security.web.authentication.logout.LogoutFilter@6047f50e, com.example.novapo_practice05.filter.JwtTokenFilter@72a180c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5be9f52f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71fe89c4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@292da7e3, org.springframework.security.web.session.SessionManagementFilter@8eabc3c, org.springframework.security.web.access.ExceptionTranslationFilter@788fbbb9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48f1936a]
+2022-10-26 19:16:28.930  WARN 3696 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-26 19:16:29.102  WARN 3696 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 19:16:30.205  INFO 3696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-26 19:16:30.259  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-26 19:16:30.276  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 11.817 seconds (JVM running for 12.859)
+2022-10-26 19:31:15.405  INFO 3696 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 81 class path changes (0 additions, 81 deletions, 0 modifications)
+2022-10-26 19:31:15.658  INFO 3696 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-26 19:31:15.777  INFO 3696 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:31:16.078  INFO 3696 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-26 19:31:16.808  INFO 3696 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-26 19:31:30.068  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 3696 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 19:31:30.077  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 19:31:30.667  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 19:31:30.669  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-10-26 19:31:30.864  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-26 19:31:30.889  INFO 3696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-26 19:31:30.889  INFO 3696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-26 19:31:31.211  INFO 3696 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-26 19:31:31.230  INFO 3696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1135 ms
+2022-10-26 19:31:31.480  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-10-26 19:31:31.603  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-10-26 19:31:31.606  INFO 3696 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 19:31:31.616  INFO 3696 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-26 19:31:31.708  INFO 3696 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 19:31:31.708  INFO 3696 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:31:31.748  WARN 3696 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 19:31:32.159  INFO 3696 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@702f619, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72d5d9a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b9a066b, org.springframework.security.web.header.HeaderWriterFilter@4e01150d, org.springframework.security.web.csrf.CsrfFilter@271bb033, org.springframework.security.web.authentication.logout.LogoutFilter@1373e7e2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58ab81f2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3c100af8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@74301ed9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3ba1d3bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e738a4e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@281c53f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@413937ef, org.springframework.security.web.session.SessionManagementFilter@417aac5f, org.springframework.security.web.access.ExceptionTranslationFilter@4c432ff1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@535b9fd8]
+2022-10-26 19:31:32.198  INFO 3696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-26 19:31:32.219  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-26 19:31:32.228  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 2.353 seconds (JVM running for 914.811)
+2022-10-26 19:31:32.259  INFO 3696 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository,org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-10-26 19:31:39.603  INFO 3696 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 89 class path changes (89 additions, 0 deletions, 0 modifications)
+2022-10-26 19:31:39.661  INFO 3696 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-26 19:31:39.726  INFO 3696 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:31:39.728  INFO 3696 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-10-26 19:31:39.731  INFO 3696 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-10-26 19:31:39.886  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 3696 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 19:31:39.888  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 19:31:41.965  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 19:31:42.066  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 7 JPA repository interfaces.
+2022-10-26 19:31:42.465  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-26 19:31:42.480  INFO 3696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-26 19:31:42.480  INFO 3696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-26 19:31:42.542  INFO 3696 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-26 19:31:42.543  INFO 3696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2648 ms
+2022-10-26 19:31:42.718  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-10-26 19:31:42.818  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-10-26 19:31:42.842  INFO 3696 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 19:31:42.867  INFO 3696 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-26 19:31:42.923  WARN 3696 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-26 19:31:43.050  WARN 3696 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 19:31:43.050  WARN 3696 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 19:31:43.304  INFO 3696 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 19:31:43.305  INFO 3696 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:31:43.352  WARN 3696 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customItemRepositoryImpl' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\repository\CustomRepository\CustomItemRepositoryImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-26 19:31:43.352  INFO 3696 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:31:43.353  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-10-26 19:31:43.391  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-10-26 19:31:43.392  INFO 3696 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-26 19:31:43.398  INFO 3696 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-26 19:31:43.413 ERROR 3696 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.novapo_practice05.repository.CustomRepository.CustomItemRepositoryImpl required a bean of type 'java.lang.Class' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Class' in your configuration.
+
+2022-10-26 19:34:09.430  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 3696 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 19:34:09.430  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 19:34:09.865  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 19:34:09.956  INFO 3696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 7 JPA repository interfaces.
+2022-10-26 19:34:10.185  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-26 19:34:10.186  INFO 3696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-26 19:34:10.187  INFO 3696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-26 19:34:10.218  INFO 3696 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-10-26 19:34:10.218  INFO 3696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 785 ms
+2022-10-26 19:34:10.328  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-10-26 19:34:10.440  INFO 3696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-10-26 19:34:10.458  INFO 3696 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 19:34:10.467  INFO 3696 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-26 19:34:10.509  WARN 3696 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-26 19:34:10.592  WARN 3696 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 19:34:10.592  WARN 3696 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 19:34:10.750  INFO 3696 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 19:34:10.750  INFO 3696 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:34:11.655  INFO 3696 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a961c30, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1547dd45, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e82878, org.springframework.security.web.header.HeaderWriterFilter@5cd7d81f, org.springframework.security.web.authentication.logout.LogoutFilter@56e5a19f, com.example.novapo_practice05.filter.JwtTokenFilter@3cdd49c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ee8c77e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c9de59c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7dd0154b, org.springframework.security.web.session.SessionManagementFilter@7165f584, org.springframework.security.web.access.ExceptionTranslationFilter@6e48ac6f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77072a0f]
+2022-10-26 19:34:11.663  WARN 3696 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-26 19:34:11.728  WARN 3696 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 19:34:12.170  INFO 3696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-26 19:34:12.187  INFO 3696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-26 19:34:12.193  INFO 3696 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 2.805 seconds (JVM running for 1074.778)
+2022-10-26 19:34:12.200  INFO 3696 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' configure; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector,org.springframework.security.oauth2.client.registration.ClientRegistrationRepository,org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' customUserService (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-10-26 19:45:27.107  INFO 3696 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 19:45:27.109  INFO 3696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-10-26 19:45:27.112  INFO 3696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-10-26 20:06:17.902  INFO 6096 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 6096 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 20:06:17.906  INFO 6096 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 20:06:18.031  INFO 6096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-26 20:06:18.032  INFO 6096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-26 20:06:19.906  INFO 6096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 20:06:20.167  INFO 6096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 243 ms. Found 7 JPA repository interfaces.
+2022-10-26 20:06:22.512  INFO 6096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-26 20:06:22.541  INFO 6096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-26 20:06:22.542  INFO 6096 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-26 20:06:22.814  INFO 6096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-26 20:06:22.816  INFO 6096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4783 ms
+2022-10-26 20:06:23.357  INFO 6096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-26 20:06:24.159  INFO 6096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-26 20:06:24.506  INFO 6096 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 20:06:24.721  INFO 6096 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-26 20:06:25.391  INFO 6096 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-26 20:06:25.722  INFO 6096 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-26 20:06:26.064  WARN 6096 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-26 20:06:26.698  WARN 6096 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 20:06:26.699  WARN 6096 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 20:06:27.679  INFO 6096 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 20:06:27.700  INFO 6096 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 20:06:27.806  WARN 6096 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customItemRepositoryImpl' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\repository\CustomRepository\CustomItemRepositoryImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-26 20:06:27.808  INFO 6096 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 20:06:27.816  INFO 6096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-26 20:06:27.824  INFO 6096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-26 20:06:27.827  INFO 6096 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-26 20:06:27.850  INFO 6096 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-26 20:06:27.934 ERROR 6096 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.novapo_practice05.repository.CustomRepository.CustomItemRepositoryImpl required a bean of type 'java.lang.Class' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Class' in your configuration.
+
+2022-10-26 20:11:36.862  INFO 16648 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 16648 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-26 20:11:36.865  INFO 16648 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 20:11:36.982  INFO 16648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-26 20:11:36.983  INFO 16648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-26 20:11:38.716  INFO 16648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 20:11:38.936  INFO 16648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203 ms. Found 7 JPA repository interfaces.
+2022-10-26 20:11:40.729  INFO 16648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-26 20:11:40.751  INFO 16648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-26 20:11:40.752  INFO 16648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-26 20:11:40.915  INFO 16648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-26 20:11:40.916  INFO 16648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3932 ms
+2022-10-26 20:11:41.309  INFO 16648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-26 20:11:41.709  INFO 16648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-26 20:11:41.804  INFO 16648 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 20:11:41.906  INFO 16648 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-26 20:11:42.252  INFO 16648 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-26 20:11:42.477  INFO 16648 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-26 20:11:42.750  WARN 16648 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-26 20:11:43.220  WARN 16648 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 20:11:43.221  WARN 16648 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-26 20:11:44.045  INFO 16648 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 20:11:44.058  INFO 16648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 20:11:46.368  INFO 16648 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4118240e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46aba5b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@93d9a17, org.springframework.security.web.header.HeaderWriterFilter@705ec74c, org.springframework.security.web.authentication.logout.LogoutFilter@6d51f192, com.example.novapo_practice05.filter.JwtTokenFilter@27d82528, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a6d88ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16b36344, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77bd997e, org.springframework.security.web.session.SessionManagementFilter@5fa2322b, org.springframework.security.web.access.ExceptionTranslationFilter@60a813a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f9d1537]
+2022-10-26 20:11:46.386  WARN 16648 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-26 20:11:46.541  WARN 16648 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 20:11:47.770  INFO 16648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-26 20:11:47.826  INFO 16648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-26 20:11:47.841  INFO 16648 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 11.858 seconds (JVM running for 12.814)
+2022-10-26 20:12:05.993  INFO 16648 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-26 20:12:05.994  INFO 16648 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-26 20:12:05.996  INFO 16648 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-10-26 20:12:06.007  INFO 16648 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/item/search?id&name&catalog_id&description':
+
+org.apache.catalina.connector.RequestFacade@2d7198bf
+
+servletPath:/item/search
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 44aca826-633f-429b-aba8-2694c20a30bb
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-26 20:12:06.018 DEBUG 16648 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /item/search?id&name&catalog_id&description
+2022-10-26 20:12:06.053 DEBUG 16648 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /item/search?id&name&catalog_id&description
+2022-10-26 20:12:06.171  INFO 16648 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.web.rest.ItemController.searchItem(SearchItemDTO))
+2022-10-26 20:12:06.200  INFO 16648 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.searchItem(SearchItemDTO))
+2022-10-26 20:13:28.000  INFO 16648 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : after called execution(ResponsePaginationDTO com.example.novapo_practice05.service.ItemService.searchItem(SearchItemDTO))
