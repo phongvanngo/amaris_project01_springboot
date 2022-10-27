@@ -29,7 +29,7 @@ public class CustomItemRepositoryImpl implements CustomItemRepository {
             .from(item)
             .join(catalog)
             .on(item.catalogID.eq(catalog.id))
-            .orderBy(item.name.asc())
+//            .orderBy(item.name.asc())
         ;
 
         if (Optional.ofNullable(searchItemDTO.getName()).isPresent()) {
@@ -60,7 +60,7 @@ public class CustomItemRepositoryImpl implements CustomItemRepository {
             page = 0;
         }
 
-        query.offset(page).limit(limit);
+        query.offset(page*limit).limit(limit);
         List<ResponseItemDTO> items = query.select(
                 Projections.fields(ResponseItemDTO.class, item.id, catalog.id.as("catalogID"), item.name.as("name"),
                     catalog.name.as("catalogName")))
