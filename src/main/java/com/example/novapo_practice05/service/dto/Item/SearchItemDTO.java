@@ -11,11 +11,11 @@ public class SearchItemDTO {
     @Nullable
     private String description;
     @Nullable
-    private Integer limit = 10;
+    private int limit =10;
     @Nullable
-    private Integer page = 0;
+    private int page = 0;
     @Nullable
-    private Integer id=null;
+    private Long id=null;
     @Nullable
     private Long catalogID=null;
 }

@@ -138,10 +138,16 @@ public class ItemService {
     }
 
     public ResponsePaginationDTO<ResponseItemDTO> searchItem(SearchItemDTO searchItemDTO) {
+
+        ResponsePaginationDTO<ResponseItemDTO> response = new ResponsePaginationDTO<>();
+
+        return itemRepository.searchByCriterias(searchItemDTO);
+    }
+
+    public ResponsePaginationDTO<ResponseItemDTO> searchItem2(SearchItemDTO searchItemDTO) {
         GenericSpecification<Item> genericSpesification = new GenericSpecification<Item>();
 
-        List<Item> myitems = itemRepository.searchByCriterias();
-        System.out.println(myitems);
+
 
         if (hasValue(searchItemDTO.getId())) {
             genericSpesification.add(new SearchCriteria("id", searchItemDTO.getId(), SearchOperation.EQUAL));
@@ -167,6 +173,8 @@ public class ItemService {
 
         int page = searchItemDTO.getPage();
         int limit = searchItemDTO.getLimit();
+
+
 
         Page<Item> itemPage = itemRepository.findAll(genericSpesification, PageRequest.of(page, limit));
         List<Item> items = itemPage.get().collect(Collectors.toList());
