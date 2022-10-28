@@ -16,7 +16,7 @@ public class UsersRoles implements Serializable {
 
     @Id
     @Column(name="role_id")
-    private Long itemID;
+    private Long roleID;
 
     @Id
     @Column(name="user_id")

@@ -3,8 +3,10 @@ package com.example.novapo_practice05.security;
 import com.example.novapo_practice05.domain.CustomUserDetails;
 import com.example.novapo_practice05.domain.Role;
 import com.example.novapo_practice05.domain.UserEntity;
+import com.example.novapo_practice05.domain.UsersRoles;
 import com.example.novapo_practice05.repository.RoleRepository;
 import com.example.novapo_practice05.repository.UserRepository;
+import com.example.novapo_practice05.repository.UsersRolesRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -28,24 +30,36 @@ public class CustomUserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("load user by username " + username);
+        try {
+            System.out.println("load user by username " + username);
 
-        Optional<UserEntity> optionalUser = userRepository.findByEmail(username);
+            Optional<UserEntity> optionalUser = userRepository.findByEmail(username);
 
-        System.out.println(optionalUser.get());
+            System.out.println(optionalUser.get());
 
-        UserEntity user = optionalUser.orElseThrow(
-            () -> new UsernameNotFoundException("\"User details not found for the user : \" + username"));
+            UserEntity user = optionalUser.orElseThrow(
+                () -> new UsernameNotFoundException("\"User details not found for the user : \" + username"));
 
-        List<Role> roles = roleRepository.findRolesByUserID(user.getId());
+            List<Role> roles = roleRepository.findRolesByUserID(user.getId());
 
-        List<SimpleGrantedAuthority> userRoles = new ArrayList<>();
-        List<GrantedAuthority> authorities = new ArrayList<>();
+            System.out.println("roles");
+            System.out.println(roles);
 
-        for (Role role : roles) {
-            userRoles.add(new SimpleGrantedAuthority(role.getName()));
+            List<SimpleGrantedAuthority> userRoles = new ArrayList<>();
+            List<GrantedAuthority> authorities = new ArrayList<>();
+
+            for (Role role : roles) {
+                userRoles.add(new SimpleGrantedAuthority(role.getName()));
+            }
+
+            System.out.println(userRoles);
+
+            return new CustomUserDetails(user, authorities,userRoles);
+        }
+         catch (Exception ex) {
+             System.out.println("error" + ex);
+             return null;
         }
 
-        return new CustomUserDetails(user, authorities,userRoles);
     }
 }
