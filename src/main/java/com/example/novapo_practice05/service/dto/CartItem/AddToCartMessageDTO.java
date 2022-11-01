@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class AddToCartMessageDTO {
-    String userName;
+    String username;
     Long itemID;
     String itemName;
     Integer quantity;

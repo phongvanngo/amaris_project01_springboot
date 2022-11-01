@@ -51,6 +51,7 @@ public class ApplicationSecurity {
             .antMatchers(HttpMethod.GET,"/test", "/test/**").permitAll()
             .antMatchers(HttpMethod.GET,"/item","/catalog","/item/search","/catalog/search").permitAll()
             .antMatchers("/auth/login", "/register").permitAll()
+            .antMatchers("/ping-service/*").permitAll()
             .anyRequest().authenticated();
 
         http.exceptionHandling()

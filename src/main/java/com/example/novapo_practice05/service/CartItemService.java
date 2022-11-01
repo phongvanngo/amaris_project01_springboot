@@ -158,7 +158,7 @@ public class CartItemService {
 
         AddToCartMessageDTO addToCartMessageDTO = new AddToCartMessageDTO();
         addToCartMessageDTO.setItemName(item.getName());
-        addToCartMessageDTO.setUserName(username);
+        addToCartMessageDTO.setUsername(username);
         addToCartMessageDTO.setItemID(item.getId());
         addToCartMessageDTO.setQuantity(addToCartDTO.getQuantity());
 
