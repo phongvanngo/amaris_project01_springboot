@@ -17,6 +17,6 @@ public class TestAPI {
 
     @GetMapping
     public String testAPI() {
-        return this.userRepository.generateUserId();
+        return null;
     }
 }

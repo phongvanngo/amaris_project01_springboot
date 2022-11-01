@@ -23,6 +23,7 @@ import lombok.Data;
 public class UserEntity extends AbstractAuditingEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "first_name")

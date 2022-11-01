@@ -164,7 +164,7 @@ public class CartItemService {
 
         ObjectMapper objectMapper = new ObjectMapper();
         String message = objectMapper.writeValueAsString(addToCartMessageDTO);
-
+        System.out.println(message);
         kafkaTemplate.send(TOPIC,message);
 
         return null;

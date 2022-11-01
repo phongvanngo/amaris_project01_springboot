@@ -99,6 +99,7 @@ public class UserService  {
             }
 
         } catch (Exception ex) {
+            System.out.println(ex);
             throw new CouldNotCreateUserException(savedUser.getEmail());
         }
         return newUser;
@@ -135,6 +136,8 @@ public class UserService  {
         if (user.isEmpty()) {
             throw new UserNotFoundException(setRoleDTO.getUserID());
         }
+
+
 
 //        Set<UserRole> roles = new HashSet<>(user.get().getRoles());
 //        userRoles.add(userRole.get());

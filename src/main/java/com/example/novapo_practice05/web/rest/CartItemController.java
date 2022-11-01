@@ -39,7 +39,7 @@ public class CartItemController {
     }
 
     @PostMapping("/add-to-cart")
-    @RolesAllowed({"ROLE_CUSTOMER"})
+//    @RolesAllowed({"ROLE_CUSTOMER"})
     public Object addItemToCart(@RequestBody @Valid AddToCartDTO addToCartDTO) throws JsonProcessingException {
         return cartItemService.addToCart(addToCartDTO);
     }
