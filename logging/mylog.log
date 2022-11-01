@@ -1,24 +1,500 @@
-2022-10-28 00:02:16.171  INFO 7968 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-28 00:02:16.192  INFO 7968 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-28 00:02:16.198  INFO 7968 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-10-28 00:02:16.219  INFO 7968 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+2022-10-31 04:27:19.700  INFO 7632 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 7632 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 04:27:19.708  INFO 7632 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 04:27:19.812  INFO 7632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 04:27:19.814  INFO 7632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 04:27:21.417  INFO 7632 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 04:27:21.630  INFO 7632 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 7 JPA repository interfaces.
+2022-10-31 04:27:23.402  INFO 7632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 04:27:23.418  INFO 7632 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 04:27:23.419  INFO 7632 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 04:27:23.564  INFO 7632 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 04:27:23.565  INFO 7632 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3750 ms
+2022-10-31 04:27:23.919  INFO 7632 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-31 04:27:24.286  INFO 7632 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-31 04:27:24.393  INFO 7632 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 04:27:24.499  INFO 7632 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-31 04:27:24.785  INFO 7632 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-31 04:27:25.040  INFO 7632 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 04:27:25.299  WARN 7632 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 04:27:25.701  WARN 7632 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:27:25.701  WARN 7632 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:27:26.413  INFO 7632 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 04:27:26.427  INFO 7632 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:27:28.446  INFO 7632 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2cccd95f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@604b5138, org.springframework.security.web.context.SecurityContextPersistenceFilter@6af2adba, org.springframework.security.web.header.HeaderWriterFilter@54303aa7, org.springframework.security.web.authentication.logout.LogoutFilter@11cd34e6, com.example.novapo_practice05.filter.JwtTokenFilter@29a8f724, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@627a0303, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ccc62fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a9ed182, org.springframework.security.web.session.SessionManagementFilter@24f09122, org.springframework.security.web.access.ExceptionTranslationFilter@5d9125bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38fe86b8]
+2022-10-31 04:27:28.467  WARN 7632 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-31 04:27:28.521  INFO 7632 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : before called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:27:28.531  INFO 7632 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : after called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:27:28.699  WARN 7632 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-31 04:27:30.114  WARN 7632 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-31 04:27:30.178  INFO 7632 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-10-31 04:27:30.305  INFO 7632 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2022-10-31 04:27:30.305  INFO 7632 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2022-10-31 04:27:30.306  INFO 7632 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667215650303
+2022-10-31 04:27:30.339  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:30.346  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:30.465  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:30.465  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:30.575  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:30.577  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:30.908  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:30.908  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:31.347  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:31.348  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:32.338  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:32.338  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:33.327  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:33.328  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:34.421  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:34.422  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:35.302  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:35.303  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:36.181  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:36.181  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:37.065  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:37.066  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:37.945  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:37.946  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:39.044  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:39.045  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:40.255  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:40.256  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:41.352  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:41.352  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:42.343  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:42.344  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:43.441  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:43.442  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:44.544  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:44.544  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:45.751  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:45.752  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:46.853  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:46.854  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:47.950  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:47.951  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:48.842  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:48.842  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:49.837  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:49.838  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:50.937  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:50.938  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:52.038  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:52.038  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:53.029  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:53.030  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:54.124  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:54.125  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:55.219  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:55.219  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:56.097  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:56.097  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:57.194  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:57.194  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:58.293  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:58.295  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:27:59.396  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:27:59.396  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:00.291  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:00.291  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:00.327  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+
+2022-10-31 04:28:00.329 ERROR 7632 --- [restartedMain] o.springframework.kafka.core.KafkaAdmin  : Could not configure topics
+
+org.springframework.kafka.KafkaException: Timed out waiting to get existing topics; nested exception is java.util.concurrent.TimeoutException
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$8(KafkaAdmin.java:388) ~[spring-kafka-2.8.9.jar:2.8.9]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.springframework.kafka.core.KafkaAdmin.checkPartitions(KafkaAdmin.java:367) ~[spring-kafka-2.8.9.jar:2.8.9]
+	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:263) ~[spring-kafka-2.8.9.jar:2.8.9]
+	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:200) ~[spring-kafka-2.8.9.jar:2.8.9]
+	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:167) ~[spring-kafka-2.8.9.jar:2.8.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:974) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.4.jar:2.7.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.4.jar:2.7.4]
+	at com.example.novapo_practice05.NovapoPractice05Application.main(NovapoPractice05Application.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.4.jar:2.7.4]
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095) ~[na:na]
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:180) ~[kafka-clients-3.1.2.jar:na]
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$8(KafkaAdmin.java:370) ~[spring-kafka-2.8.9.jar:2.8.9]
+	... 18 common frames omitted
+
+2022-10-31 04:28:01.433  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:01.433  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:02.346  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:02.347  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:03.224  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:03.225  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:04.287  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:04.318  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:05.358  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:05.358  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:06.297  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:06.302  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:07.444  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:07.445  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:08.537  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:08.537  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:09.767  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2022-10-31 04:28:09.768  WARN 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-10-31 04:28:10.344  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Forcing a hard I/O thread shutdown. Requests in progress will be aborted.
+2022-10-31 04:28:10.345  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2022-10-31 04:28:10.345  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+
+2022-10-31 04:28:10.346  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Timed out 2 remaining operation(s) during close.
+2022-10-31 04:28:10.352  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 04:28:10.353  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 04:28:10.353  INFO 7632 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 04:28:10.380  INFO 7632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-31 04:28:10.393  INFO 7632 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 51.594 seconds (JVM running for 53.371)
+2022-10-31 04:29:22.431  INFO 7632 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:29:22.438  INFO 7632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-31 04:29:22.450  INFO 7632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-31 04:29:33.369  INFO 5492 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 5492 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 04:29:33.379  INFO 5492 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 04:29:33.496  INFO 5492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 04:29:33.496  INFO 5492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 04:29:35.685  INFO 5492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 04:29:35.901  INFO 5492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203 ms. Found 7 JPA repository interfaces.
+2022-10-31 04:29:39.380  INFO 5492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 04:29:39.402  INFO 5492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 04:29:39.403  INFO 5492 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 04:29:39.666  INFO 5492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 04:29:39.667  INFO 5492 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6170 ms
+2022-10-31 04:29:40.096  INFO 5492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-31 04:29:40.452  INFO 5492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-31 04:29:40.716  INFO 5492 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 04:29:40.854  INFO 5492 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-31 04:29:41.265  INFO 5492 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-31 04:29:41.560  INFO 5492 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 04:29:41.818  WARN 5492 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 04:29:42.326  WARN 5492 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:29:42.326  WARN 5492 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:29:43.526  INFO 5492 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 04:29:43.549  INFO 5492 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:29:46.066  INFO 5492 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44fbcb53, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1716e834, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e7b033e, org.springframework.security.web.header.HeaderWriterFilter@64a1d5ba, org.springframework.security.web.authentication.logout.LogoutFilter@6d8d1d8e, com.example.novapo_practice05.filter.JwtTokenFilter@de9c0b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ea6a73b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4153899, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ee17b0d, org.springframework.security.web.session.SessionManagementFilter@5d6f32ef, org.springframework.security.web.access.ExceptionTranslationFilter@5b77cfb8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c51edfd]
+2022-10-31 04:29:46.087  WARN 5492 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-31 04:29:46.118  INFO 5492 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : before called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:29:46.126  INFO 5492 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : after called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:29:46.250  WARN 5492 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-31 04:29:47.676  WARN 5492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-31 04:29:47.744  INFO 5492 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-10-31 04:29:47.880  INFO 5492 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2022-10-31 04:29:47.880  INFO 5492 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2022-10-31 04:29:47.880  INFO 5492 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667215787877
+2022-10-31 04:29:48.720  INFO 5492 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2022-10-31 04:29:48.731  INFO 5492 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 04:29:48.731  INFO 5492 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 04:29:48.731  INFO 5492 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 04:29:48.772  INFO 5492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-31 04:29:48.799  INFO 5492 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 17.782 seconds (JVM running for 19.743)
+2022-10-31 04:33:57.684  INFO 5492 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:33:57.689  INFO 5492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-31 04:33:57.693  INFO 5492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-31 04:34:13.432  INFO 18868 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 18868 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 04:34:13.435  INFO 18868 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 04:34:13.529  INFO 18868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 04:34:13.529  INFO 18868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 04:34:15.148  INFO 18868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 04:34:15.359  INFO 18868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 7 JPA repository interfaces.
+2022-10-31 04:34:17.310  INFO 18868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 04:34:17.328  INFO 18868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 04:34:17.329  INFO 18868 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 04:34:17.519  INFO 18868 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 04:34:17.521  INFO 18868 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3991 ms
+2022-10-31 04:34:18.017  INFO 18868 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-31 04:34:18.341  INFO 18868 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-31 04:34:18.431  INFO 18868 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 04:34:18.545  INFO 18868 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-31 04:34:18.874  INFO 18868 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-31 04:34:19.094  INFO 18868 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 04:34:19.338  WARN 18868 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 04:34:19.746  WARN 18868 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:34:19.747  WARN 18868 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:34:20.457  INFO 18868 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 04:34:20.469  INFO 18868 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:34:22.546  INFO 18868 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@637e1c8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49cb82ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@7537acbd, org.springframework.security.web.header.HeaderWriterFilter@6515c19b, org.springframework.security.web.authentication.logout.LogoutFilter@6ea7e90f, com.example.novapo_practice05.filter.JwtTokenFilter@1d32c6e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a5a376, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1be0e3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@276673d4, org.springframework.security.web.session.SessionManagementFilter@6cf327d6, org.springframework.security.web.access.ExceptionTranslationFilter@6292461e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5972d821]
+2022-10-31 04:34:22.565  WARN 18868 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-31 04:34:22.596  INFO 18868 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : before called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:34:22.605  INFO 18868 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : after called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:34:22.717  WARN 18868 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-31 04:34:24.111  WARN 18868 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-31 04:34:24.184  INFO 18868 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-10-31 04:34:24.339  INFO 18868 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2022-10-31 04:34:24.339  INFO 18868 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2022-10-31 04:34:24.339  INFO 18868 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667216064335
+2022-10-31 04:34:25.062  INFO 18868 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2022-10-31 04:34:25.073  INFO 18868 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 04:34:25.073  INFO 18868 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 04:34:25.073  INFO 18868 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 04:34:25.098  INFO 18868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-31 04:34:25.114  INFO 18868 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 12.532 seconds (JVM running for 14.225)
+2022-10-31 04:36:25.550  INFO 18868 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-31 04:36:25.551  INFO 18868 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-31 04:36:25.553  INFO 18868 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-31 04:36:25.565  INFO 18868 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
 
 ************************************************************
 
-Request received for GET '/subjects':
+Request received for POST '/add-to-cart':
 
-org.apache.catalina.connector.RequestFacade@49992416
+org.apache.catalina.connector.RequestFacade@7d69a00b
 
-servletPath:/subjects
+servletPath:/add-to-cart
 pathInfo:null
 headers: 
-content-type: application/vnd.schemaregistry.v1+json
-cache-control: no-cache
-pragma: no-cache
-user-agent: Java/14.0.2
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjY3Njg4NjgsImV4cCI6MTY2Njg1NTI2OH0.7O0I9rEVm9Qp7XQXdQIEqajpM47HjCXdTtEoxY_gs9UUl5C8_DnEapaOHYhjw6h5hf3RleNKayHYE0hHrpqxAA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: dbb92180-6e15-4ad8-8712-df5d5a91a7ae
 host: localhost:8081
-accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+accept-encoding: gzip, deflate, br
 connection: keep-alive
+content-length: 39
 
 
 Security filter chain: [
@@ -40,25 +516,28 @@ Security filter chain: [
 ************************************************************
 
 
-2022-10-28 00:02:16.378 DEBUG 7968 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /subjects
-2022-10-28 00:02:16.389  INFO 7968 --- [http-nio-8081-exec-1] Spring Security Debugger                 : 
+2022-10-31 04:36:25.572 DEBUG 18868 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 04:36:25.691 ERROR 18868 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : Expired JWT token
+2022-10-31 04:36:25.717  INFO 18868 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
 
 ************************************************************
 
-Request received for GET '/error':
+Request received for POST '/error':
 
-org.apache.catalina.core.ApplicationHttpRequest@5d2d9ed4
+org.apache.catalina.core.ApplicationHttpRequest@7c13daff
 
 servletPath:/error
 pathInfo:null
 headers: 
-content-type: application/vnd.schemaregistry.v1+json
-cache-control: no-cache
-pragma: no-cache
-user-agent: Java/14.0.2
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjY3Njg4NjgsImV4cCI6MTY2Njg1NTI2OH0.7O0I9rEVm9Qp7XQXdQIEqajpM47HjCXdTtEoxY_gs9UUl5C8_DnEapaOHYhjw6h5hf3RleNKayHYE0hHrpqxAA
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: dbb92180-6e15-4ad8-8712-df5d5a91a7ae
 host: localhost:8081
-accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+accept-encoding: gzip, deflate, br
 connection: keep-alive
+content-length: 39
 
 
 Security filter chain: [
@@ -80,8 +559,964 @@ Security filter chain: [
 ************************************************************
 
 
-2022-10-28 00:02:16.390 DEBUG 7968 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
-2022-10-28 00:02:16.390 DEBUG 7968 --- [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
-2022-10-28 00:15:02.818  INFO 7968 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-28 00:15:02.843  INFO 7968 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2022-10-28 00:15:02.871  INFO 7968 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-10-31 04:36:25.717 DEBUG 18868 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-31 04:36:25.718 DEBUG 18868 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-31 04:36:45.300  INFO 18868 --- [http-nio-8081-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/auth/login':
+
+org.apache.catalina.connector.RequestFacade@7d69a00b
+
+servletPath:/auth/login
+pathInfo:null
+headers: 
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 43db9b09-291a-4bcd-a968-66953047392b
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 61
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 04:36:45.301 DEBUG 18868 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2022-10-31 04:36:45.302 DEBUG 18868 --- [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2022-10-31 04:36:45.503  INFO 18868 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : before called execution(ResponseEntity com.example.novapo_practice05.web.rest.AuthController.login(AuthDTO))
+2022-10-31 04:36:45.510  INFO 18868 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : before called execution(AuthResponseDTO com.example.novapo_practice05.service.AuthService.grantUser(AuthDTO))
+2022-10-31 04:36:46.312  INFO 18868 --- [http-nio-8081-exec-3] c.e.n.aspect.LoggingServiceAspect        : after called execution(AuthResponseDTO com.example.novapo_practice05.service.AuthService.grantUser(AuthDTO))
+2022-10-31 04:37:04.373  INFO 18868 --- [http-nio-8081-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@7d69a00b
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 7f64451a-84fb-4169-a9b1-b8efd3d55104
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 39
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 04:37:04.373 DEBUG 18868 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 04:37:04.383 DEBUG 18868 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 04:37:04.391  INFO 18868 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 04:37:04.398  INFO 18868 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 04:37:04.405  INFO 18868 --- [http-nio-8081-exec-4] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 04:37:04.417 ERROR 18868 --- [http-nio-8081-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.lang.String cannot be cast to class com.example.novapo_practice05.domain.CustomUserDetails (java.lang.String is in module java.base of loader 'bootstrap'; com.example.novapo_practice05.domain.CustomUserDetails is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @2de9335f)] with root cause
+
+java.lang.ClassCastException: class java.lang.String cannot be cast to class com.example.novapo_practice05.domain.CustomUserDetails (java.lang.String is in module java.base of loader 'bootstrap'; com.example.novapo_practice05.domain.CustomUserDetails is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @2de9335f)
+	at com.example.novapo_practice05.service.CartItemService.addToCart(CartItemService.java:150) ~[classes/:na]
+	at com.example.novapo_practice05.service.CartItemService$$FastClassBySpringCGLIB$$1c3f22fe.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.novapo_practice05.service.CartItemService$$EnhancerBySpringCGLIB$$cf753855.addToCart(<generated>) ~[classes/:na]
+	at com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(CartItemController.java:34) ~[classes/:na]
+	at com.example.novapo_practice05.web.rest.CartItemController$$FastClassBySpringCGLIB$$322c1f24.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61) ~[spring-security-core-5.7.3.jar:5.7.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.novapo_practice05.web.rest.CartItemController$$EnhancerBySpringCGLIB$$5ab982e3.addItemToCart(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at com.example.novapo_practice05.filter.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2022-10-31 04:37:04.419  INFO 18868 --- [http-nio-8081-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@5452db9
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 7f64451a-84fb-4169-a9b1-b8efd3d55104
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 39
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 04:37:04.420 DEBUG 18868 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-10-31 04:37:04.420 DEBUG 18868 --- [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /error
+2022-10-31 04:39:18.988  INFO 18868 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:39:18.994  INFO 18868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-31 04:39:18.999  INFO 18868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-31 04:40:10.788  INFO 20104 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 20104 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 04:40:10.790  INFO 20104 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 04:40:10.895  INFO 20104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 04:40:10.895  INFO 20104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 04:40:12.526  INFO 20104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 04:40:12.743  INFO 20104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 202 ms. Found 7 JPA repository interfaces.
+2022-10-31 04:40:14.604  INFO 20104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 04:40:14.620  INFO 20104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 04:40:14.621  INFO 20104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 04:40:14.784  INFO 20104 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 04:40:14.784  INFO 20104 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3888 ms
+2022-10-31 04:40:15.148  INFO 20104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-31 04:40:15.410  INFO 20104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-31 04:40:15.491  INFO 20104 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 04:40:15.578  INFO 20104 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-31 04:40:15.976  INFO 20104 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-31 04:40:16.283  INFO 20104 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 04:40:16.585  WARN 20104 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 04:40:17.068  WARN 20104 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:40:17.069  WARN 20104 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:40:17.815  INFO 20104 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 04:40:17.830  INFO 20104 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:40:21.216  INFO 20104 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a5b6d8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56f256c, org.springframework.security.web.context.SecurityContextPersistenceFilter@62a91f54, org.springframework.security.web.header.HeaderWriterFilter@2b7bee99, org.springframework.security.web.authentication.logout.LogoutFilter@69c514a3, com.example.novapo_practice05.filter.JwtTokenFilter@27f5ddc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51634401, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@322826ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a8d180d, org.springframework.security.web.session.SessionManagementFilter@2212e1da, org.springframework.security.web.access.ExceptionTranslationFilter@2bc88429, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45089878]
+2022-10-31 04:40:21.266  WARN 20104 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-31 04:40:21.351  INFO 20104 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : before called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:40:21.374  INFO 20104 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : after called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:40:21.989  WARN 20104 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-31 04:40:24.830  WARN 20104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-31 04:40:24.934  INFO 20104 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-10-31 04:40:25.173  INFO 20104 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2022-10-31 04:40:25.175  INFO 20104 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2022-10-31 04:40:25.175  INFO 20104 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667216425171
+2022-10-31 04:40:25.960  INFO 20104 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2022-10-31 04:40:25.973  INFO 20104 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 04:40:25.973  INFO 20104 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 04:40:25.974  INFO 20104 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 04:40:26.011  INFO 20104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-31 04:40:26.044  INFO 20104 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 16.101 seconds (JVM running for 17.568)
+2022-10-31 04:40:57.040  INFO 20104 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-31 04:40:57.042  INFO 20104 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-31 04:40:57.048  INFO 20104 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-10-31 04:40:57.063  INFO 20104 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@55693271
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: d45f62d4-5749-41fc-884d-a8d76372f23f
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 39
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 04:40:57.072 DEBUG 20104 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 04:40:57.240 DEBUG 20104 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 04:40:57.358  INFO 20104 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 04:40:57.363  INFO 20104 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 04:40:57.486  INFO 20104 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 04:43:14.866  INFO 20104 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2022-10-31 04:43:14.904  INFO 20104 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-31 04:43:14.906  INFO 20104 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-31 04:43:14.935  INFO 20104 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:43:14.941  INFO 20104 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-31 04:43:14.947  INFO 20104 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-31 04:43:15.145  INFO 20104 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 20104 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 04:43:15.146  INFO 20104 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 04:43:15.941  INFO 20104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 04:43:16.067  INFO 20104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 7 JPA repository interfaces.
+2022-10-31 04:43:16.533  INFO 20104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 04:43:16.534  INFO 20104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 04:43:16.537  INFO 20104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 04:43:16.582  INFO 20104 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 04:43:16.583  INFO 20104 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
+2022-10-31 04:43:16.819  INFO 20104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-10-31 04:43:16.906  INFO 20104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-10-31 04:43:16.932  INFO 20104 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 04:43:16.950  INFO 20104 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 04:43:16.979  WARN 20104 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 04:43:17.140  WARN 20104 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:43:17.140  WARN 20104 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:43:17.373  INFO 20104 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 04:43:17.373  INFO 20104 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:43:18.884  WARN 20104 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartItemController' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\web\rest\CartItemController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.web.rest.CartItemController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@34990489]
+2022-10-31 04:43:18.886  INFO 20104 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:43:18.887  INFO 20104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-10-31 04:43:18.953  INFO 20104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-10-31 04:43:33.914  INFO 1544 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1544 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 04:43:33.916  INFO 1544 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 04:43:34.014  INFO 1544 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 04:43:34.014  INFO 1544 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 04:43:35.662  INFO 1544 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 04:43:35.871  INFO 1544 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 194 ms. Found 7 JPA repository interfaces.
+2022-10-31 04:43:37.572  INFO 1544 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 04:43:37.588  INFO 1544 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 04:43:37.589  INFO 1544 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 04:43:37.729  INFO 1544 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 04:43:37.729  INFO 1544 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3714 ms
+2022-10-31 04:43:38.095  INFO 1544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-31 04:43:38.389  INFO 1544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-31 04:43:38.495  INFO 1544 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 04:43:38.596  INFO 1544 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-31 04:43:38.898  INFO 1544 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-31 04:43:39.137  INFO 1544 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 04:43:39.389  WARN 1544 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 04:43:39.818  WARN 1544 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:43:39.819  WARN 1544 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 04:43:40.801  INFO 1544 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 04:43:40.817  INFO 1544 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 04:43:42.860  INFO 1544 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ed188e4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49e76b2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@586f8bb8, org.springframework.security.web.header.HeaderWriterFilter@213f342d, org.springframework.security.web.authentication.logout.LogoutFilter@5b1db618, com.example.novapo_practice05.filter.JwtTokenFilter@4a51173, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bd40819, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@94b53ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@662a3ecb, org.springframework.security.web.session.SessionManagementFilter@1187726c, org.springframework.security.web.access.ExceptionTranslationFilter@472a10c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13ac9da5]
+2022-10-31 04:43:42.888  WARN 1544 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-10-31 04:43:42.915  INFO 1544 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : before called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:43:42.923  INFO 1544 --- [restartedMain] c.e.n.aspect.LoggingServiceAspect        : after called execution(NewTopic com.example.novapo_practice05.service.Producer.createTopic())
+2022-10-31 04:43:43.046  WARN 1544 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-31 04:43:44.395  WARN 1544 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-31 04:43:44.460  INFO 1544 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-10-31 04:43:44.578  INFO 1544 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2022-10-31 04:43:44.579  INFO 1544 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2022-10-31 04:43:44.579  INFO 1544 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667216624576
+2022-10-31 04:43:45.338  INFO 1544 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2022-10-31 04:43:45.350  INFO 1544 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 04:43:45.350  INFO 1544 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 04:43:45.351  INFO 1544 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 04:43:45.376  INFO 1544 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-10-31 04:43:45.392  INFO 1544 --- [restartedMain] c.e.n.NovapoPractice05Application        : Started NovapoPractice05Application in 12.38 seconds (JVM running for 14.201)
+2022-10-31 04:44:06.491  INFO 1544 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-31 04:44:06.491  INFO 1544 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-31 04:44:06.492  INFO 1544 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-31 04:44:06.507  INFO 1544 --- [http-nio-8081-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@5512de58
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 8fc81b4a-c186-4332-bc50-f5c82422dec7
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 39
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 04:44:06.516 DEBUG 1544 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 04:44:06.656 DEBUG 1544 --- [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 04:44:06.896  INFO 1544 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 04:44:06.903  INFO 1544 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 04:44:07.069  INFO 1544 --- [http-nio-8081-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-10-31 04:44:07.103  INFO 1544 --- [http-nio-8081-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2022-10-31 04:44:07.164  INFO 1544 --- [http-nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2022-10-31 04:44:07.164  INFO 1544 --- [http-nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2022-10-31 04:44:07.164  INFO 1544 --- [http-nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667216647164
+2022-10-31 04:44:07.231  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test_topic-0 to 0 since the associated topicId changed from null to mobPYdM6RGe20RZ7EjlrxQ
+2022-10-31 04:44:07.232  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test_topic-1 to 0 since the associated topicId changed from null to mobPYdM6RGe20RZ7EjlrxQ
+2022-10-31 04:44:07.233  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test_topic-2 to 0 since the associated topicId changed from null to mobPYdM6RGe20RZ7EjlrxQ
+2022-10-31 04:44:07.234  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: yHU-iz1WSSy3KCr-irKfGA
+2022-10-31 04:44:07.269  INFO 1544 --- [http-nio-8081-exec-2] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 04:44:07.779  INFO 1544 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2022-10-31 04:53:37.310  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2022-10-31 08:16:04.143  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2022-10-31 08:16:05.731  WARN 1544 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h26s768ms761µs600ns).
+2022-10-31 18:19:45.578  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2022-10-31 18:19:47.042  WARN 1544 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h3m51s52ms164µs800ns).
+2022-10-31 18:48:30.580  INFO 1544 --- [http-nio-8081-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@5512de58
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 0509e6cd-1d0e-43f3-aa94-34d698bd602a
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 39
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 18:48:30.583 DEBUG 1544 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 18:48:30.598 DEBUG 1544 --- [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 18:48:30.610  INFO 1544 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 18:48:30.611  INFO 1544 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:48:30.653  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test_topic-0 to 0 since the associated topicId changed from null to mobPYdM6RGe20RZ7EjlrxQ
+2022-10-31 18:48:30.654  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test_topic-2 to 0 since the associated topicId changed from null to mobPYdM6RGe20RZ7EjlrxQ
+2022-10-31 18:48:30.654  INFO 1544 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition test_topic-1 to 0 since the associated topicId changed from null to mobPYdM6RGe20RZ7EjlrxQ
+2022-10-31 18:48:30.665  INFO 1544 --- [http-nio-8081-exec-5] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:48:48.329  INFO 1544 --- [http-nio-8081-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@5512de58
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: fd838b87-6bf4-4367-8856-3473f6a851a4
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 39
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 18:48:48.330 DEBUG 1544 --- [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 18:48:48.335 DEBUG 1544 --- [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 18:48:48.338  INFO 1544 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 18:48:48.338  INFO 1544 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:48:48.355  INFO 1544 --- [http-nio-8081-exec-6] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:49:01.660  INFO 1544 --- [http-nio-8081-exec-7] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@5512de58
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 8159b42b-92e9-4b57-a5dc-1d88916a5430
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 40
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 18:49:01.661 DEBUG 1544 --- [http-nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 18:49:01.666 DEBUG 1544 --- [http-nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 18:49:01.668  INFO 1544 --- [http-nio-8081-exec-7] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 18:49:01.668  INFO 1544 --- [http-nio-8081-exec-7] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:49:01.684  INFO 1544 --- [http-nio-8081-exec-7] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:49:01.750  WARN 1544 --- [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.novapo_practice05.exception.ItemNotFoundException: Item with Id -1 not found]
+2022-10-31 18:49:12.797  INFO 1544 --- [http-nio-8081-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/add-to-cart':
+
+org.apache.catalina.connector.RequestFacade@5512de58
+
+servletPath:/add-to-cart
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb2RlSmF2YSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiY3VzdG9tZXJAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiIiLCJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJpYXQiOjE2NjcyMTYyMDYsImV4cCI6MTY2NzMwMjYwNn0.H8_VJW2GRJA3HZMNTjpC0qDvERlTdAfZUdPYL605S67dPR3sTRATBTe4FfRtGgVZUSs9L5gltHqnsZ8sR5jS0A
+content-type: application/json
+user-agent: PostmanRuntime/7.29.2
+accept: */*
+postman-token: 667e6071-6f55-49a9-b03e-fb38f3414462
+host: localhost:8081
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 42
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-10-31 18:49:12.797 DEBUG 1544 --- [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /add-to-cart
+2022-10-31 18:49:12.805 DEBUG 1544 --- [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /add-to-cart
+2022-10-31 18:49:12.806  INFO 1544 --- [http-nio-8081-exec-8] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.web.rest.CartItemController.addItemToCart(AddToCartDTO))
+2022-10-31 18:49:12.807  INFO 1544 --- [http-nio-8081-exec-8] c.e.n.aspect.LoggingServiceAspect        : before called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:49:12.823  INFO 1544 --- [http-nio-8081-exec-8] c.e.n.aspect.LoggingServiceAspect        : after called execution(Object com.example.novapo_practice05.service.CartItemService.addToCart(AddToCartDTO))
+2022-10-31 18:53:56.267  INFO 1544 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2022-10-31 18:53:56.340  INFO 1544 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-31 18:53:56.344  INFO 1544 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-31 18:53:56.357  WARN 1544 --- [Thread-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [kafka-producer-network-thread | producer-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.WEPoll.wait(Native Method)
+ java.base/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+ java.base/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+ java.base/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+ org.apache.kafka.common.network.Selector.select(Selector.java:873)
+ org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+ org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+ org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:328)
+ org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+ java.base/java.lang.Thread.run(Thread.java:1589)
+2022-10-31 18:53:56.375  INFO 1544 --- [Thread-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2022-10-31 18:53:56.387  INFO 1544 --- [Thread-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 18:53:56.388  INFO 1544 --- [Thread-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 18:53:56.389  INFO 1544 --- [Thread-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 18:53:56.390  INFO 1544 --- [Thread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2022-10-31 18:53:56.396  INFO 1544 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 18:53:56.418  INFO 1544 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-31 18:53:56.426  INFO 1544 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-31 18:53:56.838  INFO 1544 --- [restartedMain] c.e.n.NovapoPractice05Application        : Starting NovapoPractice05Application using Java 19 on CL-LR06QRT4 with PID 1544 (C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes started by vanphong.ngo_amaris in C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05)
+2022-10-31 18:53:56.839  INFO 1544 --- [restartedMain] c.e.n.NovapoPractice05Application        : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 18:53:57.751  INFO 1544 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 18:53:57.889  INFO 1544 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 7 JPA repository interfaces.
+2022-10-31 18:53:58.527  INFO 1544 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-10-31 18:53:58.529  INFO 1544 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 18:53:58.529  INFO 1544 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 18:53:58.573  INFO 1544 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 18:53:58.574  INFO 1544 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1728 ms
+2022-10-31 18:53:58.789  INFO 1544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-10-31 18:53:58.986  INFO 1544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-10-31 18:53:59.007  INFO 1544 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 18:53:59.020  INFO 1544 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-31 18:53:59.054  WARN 1544 --- [restartedMain] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequenceGenerator
+2022-10-31 18:53:59.144  WARN 1544 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 18:53:59.144  WARN 1544 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.novapo_practice05.domain.UsersAuthorities
+2022-10-31 18:53:59.358  INFO 1544 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 18:53:59.358  INFO 1544 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 18:54:00.516  WARN 1544 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartItemController' defined in file [C:\Users\vanphong.ngo_amaris\Documents\Novapo\Learning\SpringBoot\novapo_practice05\target\classes\com\example\novapo_practice05\web\rest\CartItemController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.novapo_practice05.web.rest.CartItemController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1c5ffbda]
+2022-10-31 18:54:00.517  INFO 1544 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 18:54:00.518  INFO 1544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-10-31 18:54:00.521  INFO 1544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-10-31 18:54:00.522  INFO 1544 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]

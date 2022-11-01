@@ -14,6 +14,8 @@ spring:
   output:
     ansi:
       enabled: always
+  kafka:
+    bootstrap-servers: localhost:29092
 app:
   jwt:
     secret: abcdefghijklmnOPQRSTUVWXYZ
